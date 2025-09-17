@@ -68,7 +68,7 @@
       "type": "statement",
       "title": "Opportunity Statement",
       "text": "For active adults with diabetes or insulin resistance, we will provide safe, consistent progress by adapting workouts and low‑glycemic meals to daily glucose/metabolic context, unlike fitness apps that ignore glucose and tracking apps that stop at logging.",
-      "notes": "CGM adoption; short‑form fitness education; AI personalization expectations"
+      "notes": "Why now: CGM adoption rising — T1D Exchange Registry ~95% CGM use (2025, registry sample); 2022 Diabetes supplement (T1DX‑QI) shows higher youth vs lower adult CGM use; T2D CGM use growing (Mayberry 2023). Plus: short‑form fitness education + AI personalization expectations."
     },
     {
       "type": "bullets",
@@ -99,7 +99,8 @@
         "BOFU: Offer page with safety logic + testimonials → CTA: Start trial",
         "Post: Onboarding to daily plan; community challenges; Pro upsell when eligible",
         "Link: docs/discovery-output/journey.md"
-      ]
+      ],
+      "notes": "Disclaimers: general wellness positioning; no clinical claims or dosing guidance; encourage consultation with healthcare providers."
     },
     {
       "type": "bullets",
@@ -109,9 +110,10 @@
         "Awareness: CTR to LP 2%/3%/4%",
         "Consideration: Opt‑ins 25%/30%/35%; email CTR 8%/10%/12%",
         "Conversion: LP CVR 6%/8%/10%; trial→paid 7%/9%/12%",
-        "Post‑purchase: D1/D7/D30 near 55/30/15; plan adherence ≥ 60%",
+        "Post‑purchase: D1/D7/D30 near 55/30/15 (ambitious); plan adherence ≥ 60% (aspirational)",
         "Link: docs/discovery-output/kpis-30-60-90.md"
-      ]
+      ],
+      "notes": "Benchmarks: email CTR ~2–5% (Salesforce); LP conversion ~5–6% (Landingi); D30 retention ~3–6% (AppsFlyer via Sendbird)."
     },
     {
       "type": "bullets",
@@ -126,7 +128,7 @@
       "type": "bullets",
       "title": "Risks & Mitigations",
       "bullets": [
-        "Regulatory ambiguity → wellness positioning; no clinical claims; disclaimers",
+        "Regulatory ambiguity → wellness positioning; no clinical claims; disclaimers (see FDA/Whoop letter example)",
         "Device access → HealthKit/Google Fit first; apply to Dexcom/Abbott",
         "Privacy/security → SOC2 path; HIPAA‑aligned controls where appropriate"
       ]
@@ -138,13 +140,26 @@
         "LP A/B (safety logic explainer)",
         "Lead magnet variants (T1D vs. PCOS)",
         "Email sequence tests (order, proof density)",
-        "TOFU hooks (checklist vs. transformation)",
-        "BRD: docs/brd.md",
-        "Brand brief: docs/discovery-output/brand-brief.md",
-        "Gap/opportunity: docs/discovery-output/gap-opportunity.md",
-        "Journey: docs/discovery-output/journey.md",
-        "KPIs: docs/discovery-output/kpis-30-60-90.md",
-        "Personas: docs/discovery-output/personas-*.md"
+        "TOFU hooks (checklist vs. transformation)"
+      ]
+    },
+    {
+      "type": "sources",
+      "title": "Sources & Evidence Links",
+      "bullets": [
+        "Fitbod algorithm: https://fitbod.me/blog/fitbod-algorithm/",
+        "Freeletics site (no diabetes/CGM features): https://www.freeletics.com/",
+        "mySugr scope (diaTribe): https://diatribe.org/diabetes-technology/8-apps-improve-your-time-range",
+        "Dexcom exercise tips: https://www.dexcom.com/en-us/all-access/managing-diabetes/exercise-tips-from-dietitian",
+        "Supersapiens review: https://www.myprocoach.net/blog/supersapiens-review/",
+        "GlucoseZone overview: https://diatribe.org/diabetes-technology/glucosezone-exercise-app-people-diabetes",
+        "T1D Exchange Registry 2025: https://t1dexchange.org/t1d-registry-technology-trends-2025/",
+        "T1DX‑QI Diabetes 2022 supplement: https://diabetesjournals.org/diabetes/article/72/Supplement_1/1456-P/150825/",
+        "T2D CGM adoption (Mayberry 2023): https://link.springer.com/article/10.1007/s11606-023-08222-3",
+        "Benchmarks — CTR: https://www.salesforce.com/marketing/email/benchmarks/",
+        "Benchmarks — LP CVR: https://landingi.com/landing-page/conversion-rate-a/",
+        "Benchmarks — D30: https://sendbird.com/blog/app-retention-benchmarks-broken-down-by-industry",
+        "Internal: BRD/journey/KPIs/personas in docs/discovery-output/"
       ]
     }
   ]

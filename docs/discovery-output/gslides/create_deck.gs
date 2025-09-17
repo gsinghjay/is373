@@ -5,6 +5,8 @@
 
 var CONFIG = {
   // Auto-fill from repo content JSON. Update branch if not 'main'.
+  // Set to your GitHub raw URL for content.json, e.g.:
+  // 'https://raw.githubusercontent.com/<owner>/<repo>/<branch>/docs/discovery-output/gslides/content.json'
   contentUrl: 'https://raw.githubusercontent.com/gsinghjay/is373/main/docs/discovery-output/gslides/content.json'
 };
 
@@ -222,7 +224,8 @@ function getDeckContent() {
       { // 5 — Opportunity Statement
         type: 'statement',
         title: 'Opportunity Statement',
-        text: 'For active adults with diabetes or insulin resistance, we will provide safe, consistent progress by adapting workouts and low‑glycemic meals to daily glucose/metabolic context, unlike fitness apps that ignore glucose and tracking apps that stop at logging.'
+        text: 'For active adults with diabetes or insulin resistance, we will provide safe, consistent progress by adapting workouts and low‑glycemic meals to daily glucose/metabolic context, unlike fitness apps that ignore glucose and tracking apps that stop at logging.',
+        notes: 'Why now: CGM adoption rising — T1D Exchange Registry ~95% CGM use (2025, registry sample); 2022 Diabetes supplement (T1DX‑QI) shows higher youth vs lower adult CGM use; T2D CGM use growing (Mayberry 2023). Plus: short‑form fitness education + AI personalization expectations.'
       },
       { // 6 — Brand Brief (Visual)
         type: 'bullets',
@@ -251,7 +254,8 @@ function getDeckContent() {
           'MOFU: Lead magnet + 5‑email explainer → CTA: 14‑day trial',
           'BOFU: Offer page with safety logic + testimonials → CTA: Start trial',
           'Post: Onboarding; community challenges; Pro upsell when eligible'
-        ]
+        ],
+        notes: 'Disclaimers: general wellness positioning; no clinical claims or dosing guidance; encourage consultation with healthcare providers.'
       },
       { // 9 — KPIs 30/60/90
         type: 'bullets',
@@ -260,8 +264,9 @@ function getDeckContent() {
           'Awareness: CTR to LP 2% / 3% / 4%',
           'Consideration: Opt‑ins 25% / 30% / 35%; Email CTR 8% / 10% / 12%',
           'Conversion: LP CVR 6% / 8% / 10%; Trial→Paid 7% / 9% / 12%',
-          'Post‑purchase: D1/D7/D30 ≈ 55/30/15; plan adherence ≥ 60%'
-        ]
+          'Post‑purchase: D1/D7/D30 ≈ 55/30/15 (ambitious); plan adherence ≥ 60% (aspirational)'
+        ],
+        notes: 'Benchmarks: email CTR ~2–5% (Salesforce); LP conversion ~5–6% (Landingi); D30 retention ~3–6% (AppsFlyer via Sendbird).'
       },
       { // 10 — Closing Takeaway
         type: 'bullets',
@@ -276,7 +281,7 @@ function getDeckContent() {
         type: 'bullets',
         title: 'Risks & Mitigations (Optional)',
         bullets: [
-          'Regulatory ambiguity → wellness positioning; disclaimers; no clinical claims',
+          'Regulatory ambiguity → wellness positioning; disclaimers; no clinical claims (FDA/Whoop letter example)',
           'Device access → HealthKit/Google Fit first; apply to Dexcom/Abbott',
           'Privacy/security → SOC2 path; HIPAA‑aligned controls where appropriate'
         ]
@@ -291,16 +296,21 @@ function getDeckContent() {
           'TOFU hooks (checklist vs. transformation)'
         ]
       },
-      { // 13 — Sources
+      { // 13 — Sources & Evidence Links
         type: 'sources',
-        title: 'Sources',
+        title: 'Sources & Evidence Links',
         bullets: [
-          'BRD — docs/brd.md',
-          'Brand Brief — docs/discovery-output/brand-brief.md',
-          'Gap → Opportunity — docs/discovery-output/gap-opportunity.md',
-          'Journey — docs/discovery-output/journey.md',
-          'KPIs — docs/discovery-output/kpis-30-60-90.md',
-          'Personas — docs/discovery-output/personas-*.md'
+          'Fitbod algorithm — https://fitbod.me/blog/fitbod-algorithm/',
+          'Freeletics site (no diabetes/CGM features) — https://www.freeletics.com/',
+          'mySugr scope (diaTribe) — https://diatribe.org/diabetes-technology/8-apps-improve-your-time-range',
+          'Dexcom exercise tips — https://www.dexcom.com/en-us/all-access/managing-diabetes/exercise-tips-from-dietitian',
+          'Supersapiens review — https://www.myprocoach.net/blog/supersapiens-review/',
+          'GlucoseZone overview — https://diatribe.org/diabetes-technology/glucosezone-exercise-app-people-diabetes',
+          'T1D CGM (T1D Exchange 2025) — https://t1dexchange.org/t1d-registry-technology-trends-2025/',
+          'T1D CGM by age (Diabetes 2022 supplement) — https://diabetesjournals.org/diabetes/article/72/Supplement_1/1456-P/150825/',
+          'T2D CGM (Mayberry 2023) — https://link.springer.com/article/10.1007/s11606-023-08222-3',
+          'Benchmarks — CTR: Salesforce; CVR: Landingi; D30: AppsFlyer via Sendbird',
+          'Internal: BRD/Journey/KPIs/Personas under docs/discovery-output/'
         ]
       }
     ]
