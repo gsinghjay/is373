@@ -4,3 +4,6 @@
 
 # Claude
 .claude/
+
+# Private
+AGENTS.md
