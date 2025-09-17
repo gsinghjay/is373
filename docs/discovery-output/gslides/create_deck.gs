@@ -64,17 +64,22 @@ function createDiscoveryDeck() {
 
 function insertDropzone(slide, label) {
   // Create a light grey rectangle to indicate where to add images
-  const pageWidth = slide.getPageElements()[0].getPage().getPageWidth();
-  const pageHeight = slide.getPageElements()[0].getPage().getPageHeight();
-  const x = pageWidth * 0.05;
-  const y = pageHeight * 0.55;
-  const w = pageWidth * 0.9;
-  const h = pageHeight * 0.3;
-  const shape = slide.insertShape(SlidesApp.ShapeType.RECTANGLE, x, y, w, h);
-  shape.getText().setText(label || 'Add assets here');
-  shape.getText().getTextStyle().setBold(true);
-  shape.getFill().setSolidFill('#EEEEEE');
-  shape.getLine().setDashStyle(SlidesApp.DashStyle.DASH);
+  // Note: Slides Service does not expose page width/height directly; use safe absolute
+  // coordinates that work with default slide size.
+  var x = 40;   // left
+  var y = 300;  // top
+  var w = 860;  // width
+  var h = 180;  // height
+  try {
+    var shape = slide.insertShape(SlidesApp.ShapeType.RECTANGLE, x, y, w, h);
+    shape.getText().setText(label || 'Add assets here');
+    shape.getText().getTextStyle().setBold(true);
+    shape.getFill().setSolidFill('#EEEEEE');
+    shape.getLine().setDashStyle(SlidesApp.DashStyle.DASH);
+    return shape;
+  } catch (e) {
+    Logger.log('insertDropzone error: ' + e);
+  }
 }
 
 function setTitle(slide, title) {
