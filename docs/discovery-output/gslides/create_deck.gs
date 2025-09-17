@@ -263,7 +263,7 @@ function getDeckContent() {
         title: 'Success Metrics & KPIs (30/60/90)',
         bullets: [
           'Awareness: CTR to LP 2% / 3% / 4%',
-          'Consideration: Opt‑ins 25% / 30% / 35%; Email CTR 8% / 10% / 12%',
+          'Consideration: Opt‑ins 20% / 25% / 30%; Email CTR 5% / 8% / 10%',
           'Conversion: LP CVR 6% / 8% / 10%; Trial→Paid 7% / 9% / 12%',
           'Post‑purchase: D1/D7/D30 ≈ 55/30/15 (ambitious); plan adherence ≥ 60% (aspirational)'
         ],

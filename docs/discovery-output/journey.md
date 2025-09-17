@@ -17,8 +17,8 @@ Thesis: Lead with founder story and “sugar‑safe/PCOS‑friendly strength” 
 - Goal: Build trust and understanding of method/safety
 - Assets: Lead magnet + 5‑email series (fueling, safety rules, plan logic)
 - Primary CTA: Start 14‑day Premium trial
-- Primary KPI: Opt‑in rate → 25% / 30% / 35%
-- Secondary: Email CTR → 8% / 10% / 12%
+- Primary KPI: Opt‑in rate → 20% / 25% / 30%
+- Secondary: Email CTR → 5% / 8% / 10%
 
 ## BOFU (Conversion)
 - Goal: Convert with clarity, proof, and low risk

@@ -15,7 +15,7 @@ Concerned about progression; wants habit coaching with light strength/cardio and
 - Overhauls that feel unsustainable; analysis paralysis
 
 ## Gains / Desired Outcomes
-- Routine confidence; better energy/sleep; waist reduction
+- Routine confidence; better energy/sleep; waist reduction; accountability via community challenges and coach Q&A
 
 ## Objections
 - “Do I need a device?” “Is this too much effort?”
@@ -25,4 +25,3 @@ Concerned about progression; wants habit coaching with light strength/cardio and
 
 ## Proof Needed To Believe
 - Low‑effort setup; quick wins; no guilt‑based messaging
-

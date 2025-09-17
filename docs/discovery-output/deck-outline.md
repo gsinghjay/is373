@@ -20,6 +20,7 @@ Reference templates: docs/templates/customer-discovery/08-presentation-outline-t
 | Supersapiens/Levels | Metabolic insights | Limited prescriptive workouts/strength |
 
 - Takeaway: Fitness excels at plans; diabetes/metabolic excels at data; neither delivers CGM/IR‑aware strength periodization
+\- Note: Niche offerings (e.g., GlucoseZone) provide diabetes‑focused exercise content but do not deliver CGM‑adaptive strength periodization.
 
 ## Slide 3 — Content Audit Highlights
 - Headline: Hooks and CTAs That Land (and Miss)
@@ -37,7 +38,7 @@ Reference templates: docs/templates/customer-discovery/08-presentation-outline-t
 ## Slide 5 — Opportunity Statement
 - Headline: One‑Sentence Opportunity
 - Statement: For active adults with diabetes or insulin resistance, we will provide safe, consistent progress by adapting workouts and low‑glycemic meals to daily glucose/metabolic context, unlike fitness apps that ignore glucose and tracking apps that stop at logging.
- - Why now: CGM adoption (U.S. T1D Exchange registry ~95% CGM use in 2025; 2022 multicenter data show higher youth vs. lower adult CGM use); short‑form fitness education; AI personalization expectations
+ - Why now: CGM adoption is rising — registry sample shows ~95% use among participants (T1D Exchange, 2025); EMR data from 26 U.S. centers show age disparities (~64% youth vs. ~46% adults, T1DX‑QI, 2022); in Type 2 diabetes, ~13% used CGM in 2021 (Mayberry et al., JGIM 2023). Also: short‑form fitness education surge and AI personalization expectations.
 
 ## Slide 6 — Brand Brief (Visual)
 - Headline: Caregiver + Hero Archetype; Clear Outcomes
@@ -55,15 +56,16 @@ Reference templates: docs/templates/customer-discovery/08-presentation-outline-t
 - TOFU: Shorts with sugar‑safe/PCOS‑friendly tips → CTA: free 7‑day plan
 - MOFU: Lead magnet + 5‑email method explainer → CTA: 14‑day trial
 - BOFU: Offer page with safety logic + testimonials → CTA: Start trial
-- Post: Onboarding to daily plan; community challenges; Pro upsell when eligible
+- Post: Onboarding to daily plan; community challenges; non‑CGM path via manual logging/proxies (e.g., meal timing, RPE); Pro upsell when eligible
 - Link: docs/discovery-output/journey.md
 
 ## Slide 9 — Success Metrics & KPIs
 - Headline: 30/60/90 Targets Aligned to BRD
 - Awareness: CTR to LP 2%/3%/4%
-- Consideration: Opt‑ins 25%/30%/35%; email CTR 8%/10%/12%
+- Consideration: Opt‑ins 20%/25%/30%; email CTR 5%/8%/10%
 - Conversion: LP CVR 6%/8%/10%; trial→paid 7%/9%/12%
 - Post‑purchase: D1/D7/D30 near 55/30/15 (ambitious); plan adherence ≥ 60% (aspirational)
+ - Benchmarks context: email CTR ~2–5% (Salesforce); LP CVR ~5–6% (Landingi). Targets above medians are aspirational.
 - Link: docs/discovery-output/kpis-30-60-90.md
 
 ## Slide 10 — Closing Takeaway
@@ -72,7 +74,7 @@ Reference templates: docs/templates/customer-discovery/08-presentation-outline-t
 - Next steps: Evidence capture, competitor cards, lead magnet build, tracking plan
 
 ## Optional Slide 11 — Risks & Mitigations
-- Regulatory ambiguity → wellness positioning; no clinical claims; disclaimers
+- Regulatory ambiguity → wellness positioning; no clinical claims; disclaimers (include: “This product is not intended to diagnose, treat, cure, or prevent any disease.”)
 - Device access → HealthKit/Google Fit first; apply to Dexcom/Abbott
 - Privacy/security → SOC2 path; HIPAA‑aligned controls where appropriate
 

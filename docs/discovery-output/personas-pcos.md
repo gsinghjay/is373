@@ -6,6 +6,8 @@
 ## Quick Bio
 Wants sustainable weight loss and strength with stable energy. Prefers low‑glycemic meals and a clear, compassionate plan. Avoids clinical claims and restrictive protocols.
 
+Note: PCOS affects ~6–12% of U.S. women of reproductive age (CDC); many report challenges with weight, insulin resistance, and sustainable exercise.
+
 ## Jobs-To-Be-Done
 - When I start strength, I want PCOS‑friendly training and fueling so I can progress without crashes.
 - When I’m stressed or sleep‑deprived, I want a simpler day plan so I can stay consistent.
@@ -15,7 +17,7 @@ Wants sustainable weight loss and strength with stable energy. Prefers low‑gly
 - Energy dips after meals; conflicting advice; fear of “bulking”
 
 ## Gains / Desired Outcomes
-- Steady weight loss/waist reduction; consistent energy; confidence
+- Steady weight loss/waist reduction; consistent energy; confidence; accountability via community challenges and coach Q&A
 
 ## Objections
 - “Is this safe for PCOS?” “Will I have to give up too much?”
@@ -31,4 +33,3 @@ Wants sustainable weight loss and strength with stable energy. Prefers low‑gly
 
 ## Quotes
 - “I need a plan that fits real life and my energy.”
-
