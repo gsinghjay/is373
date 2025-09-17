@@ -75,7 +75,7 @@ function insertDropzone(slide, label) {
     shape.getText().setText(label || 'Add assets here');
     shape.getText().getTextStyle().setBold(true);
     shape.getFill().setSolidFill('#EEEEEE');
-    shape.getLine().setDashStyle(SlidesApp.DashStyle.DASH);
+    // Some methods like getLine()/DashStyle are not available in SlidesApp; skip border styling.
     return shape;
   } catch (e) {
     Logger.log('insertDropzone error: ' + e);
@@ -157,7 +157,6 @@ function insertTable(slide, headers, rows) {
   const totalRows = (rows && rows.length ? rows.length : 0) + 1;
   const totalCols = headers && headers.length ? headers.length : 3;
   const table = slide.insertTable( totalRows, totalCols );
-  table.setInherentWidth(SlidesApp.ContentAlignment.MIDDLE);
   // Header row
   headers = headers && headers.length ? headers : ['Col 1', 'Col 2', 'Col 3'];
   for (let c = 0; c < totalCols; c++) {
@@ -172,9 +171,7 @@ function insertTable(slide, headers, rows) {
       table.getCell(r + 1, c).getText().setText(val);
     }
   }
-  // Position table to the right column area
-  const geom = table.getPageElement().getTransform();
-  // Adjust to more central position
+  // Position table to a central area
   table.getPageElement().setLeft(50).setTop(140).setWidth(600);
   return table;
 }
