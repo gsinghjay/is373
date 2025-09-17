@@ -1,0 +1,151 @@
+{
+  "deckTitle": "Customer Discovery — RangeFit",
+  "slides": [
+    {
+      "type": "title",
+      "title": "RangeFit — Safety‑Aware AI Coaching for Diabetes & PCOS/IR",
+      "subtitle": "Media bubble shows diabetic athletes, CGM training tips, PCOS‑friendly strength, and IR‑friendly meals with strong engagement"
+    },
+    {
+      "type": "table",
+      "title": "Competitive Landscape Table (Condensed)",
+      "headers": [
+        "Competitor",
+        "Niche",
+        "Primary Gap"
+      ],
+      "rows": [
+        [
+          "Fitbod",
+          "Strength planner",
+          "No glucose/IR context"
+        ],
+        [
+          "Freeletics",
+          "AI coach",
+          "Not diabetes‑aware"
+        ],
+        [
+          "MySugr",
+          "Diabetes logger",
+          "No prescriptive training"
+        ],
+        [
+          "Dexcom/LibreView",
+          "Device ecosystem",
+          "Not prescriptive"
+        ],
+        [
+          "Supersapiens/Levels",
+          "Metabolic insights",
+          "Limited prescriptive workouts/strength"
+        ]
+      ],
+      "notes": "Fitness excels at plans; diabetes/metabolic excels at data; neither delivers CGM/IR‑aware strength periodization"
+    },
+    {
+      "type": "bullets",
+      "title": "Content Audit Highlights",
+      "bullets": [
+        "Headline: Hooks and CTAs That Land (and Miss)",
+        "Best examples (2–3): [Add links/screens]",
+        "What worked: clear transformations, simple checklists, authentic voice",
+        "What didn’t: generic nutrition claims, dense charts without action",
+        "Takeaway: Short, specific, safety‑oriented tips outperform broad claims"
+      ]
+    },
+    {
+      "type": "bullets",
+      "title": "Gap Analysis",
+      "bullets": [
+        "Headline: Underserved Segments + Weak Stages",
+        "Underserved: T1D lifters; T2D adults; pre‑diabetics; women with PCOS/IR",
+        "Weak stages: MOFU education on safety logic; BOFU proof/testimonials; Post‑purchase onboarding/community",
+        "Takeaway: A safety‑aware, PCOS/IR‑friendly strength wedge is open"
+      ]
+    },
+    {
+      "type": "statement",
+      "title": "Opportunity Statement",
+      "text": "For active adults with diabetes or insulin resistance, we will provide safe, consistent progress by adapting workouts and low‑glycemic meals to daily glucose/metabolic context, unlike fitness apps that ignore glucose and tracking apps that stop at logging.",
+      "notes": "CGM adoption; short‑form fitness education; AI personalization expectations"
+    },
+    {
+      "type": "bullets",
+      "title": "Brand Brief (Visual)",
+      "bullets": [
+        "Headline: Caregiver + Hero Archetype; Clear Outcomes",
+        "Archetype/Positioning/Value prop: Safety‑aware strength and IR‑friendly meals; one plan/day; fewer scary episodes; steady energy",
+        "Persuasion levers: Authority, Consistency, Unity, Reciprocity, Social Proof, Liking",
+        "Differentiators: CGM‑aware periodization; PCOS/IR defaults; daily clarity with adaptive nudges"
+      ]
+    },
+    {
+      "type": "bullets",
+      "title": "Persona (Profile)",
+      "bullets": [
+        "Headline: PCOS/IR “Maya” (32) — Sustainable Strength, Stable Energy",
+        "Snapshot: Bio, JTBD, pains (energy dips, conflicting advice), gains (steady progress, confidence), proof needed (simple rules, success stories)",
+        "Link: docs/discovery-output/personas-pcos.md"
+      ]
+    },
+    {
+      "type": "bullets",
+      "title": "Customer Journey Map",
+      "bullets": [
+        "Headline: TOFU → MOFU → BOFU → Post",
+        "TOFU: Shorts with sugar‑safe/PCOS‑friendly tips → CTA: free 7‑day plan",
+        "MOFU: Lead magnet + 5‑email method explainer → CTA: 14‑day trial",
+        "BOFU: Offer page with safety logic + testimonials → CTA: Start trial",
+        "Post: Onboarding to daily plan; community challenges; Pro upsell when eligible",
+        "Link: docs/discovery-output/journey.md"
+      ]
+    },
+    {
+      "type": "bullets",
+      "title": "Success Metrics & KPIs",
+      "bullets": [
+        "Headline: 30/60/90 Targets Aligned to BRD",
+        "Awareness: CTR to LP 2%/3%/4%",
+        "Consideration: Opt‑ins 25%/30%/35%; email CTR 8%/10%/12%",
+        "Conversion: LP CVR 6%/8%/10%; trial→paid 7%/9%/12%",
+        "Post‑purchase: D1/D7/D30 near 55/30/15; plan adherence ≥ 60%",
+        "Link: docs/discovery-output/kpis-30-60-90.md"
+      ]
+    },
+    {
+      "type": "bullets",
+      "title": "Closing Takeaway",
+      "bullets": [
+        "Headline: Wedge First, Then Expand",
+        "The bet: Win T1D lifter and PCOS/IR wedges with safety‑aware strength → expand into broader segments as integrations mature",
+        "Next steps: Evidence capture, competitor cards, lead magnet build, tracking plan"
+      ]
+    },
+    {
+      "type": "bullets",
+      "title": "Risks & Mitigations",
+      "bullets": [
+        "Regulatory ambiguity → wellness positioning; no clinical claims; disclaimers",
+        "Device access → HealthKit/Google Fit first; apply to Dexcom/Abbott",
+        "Privacy/security → SOC2 path; HIPAA‑aligned controls where appropriate"
+      ]
+    },
+    {
+      "type": "bullets",
+      "title": "Experiment Backlog",
+      "bullets": [
+        "LP A/B (safety logic explainer)",
+        "Lead magnet variants (T1D vs. PCOS)",
+        "Email sequence tests (order, proof density)",
+        "TOFU hooks (checklist vs. transformation)",
+        "BRD: docs/brd.md",
+        "Brand brief: docs/discovery-output/brand-brief.md",
+        "Gap/opportunity: docs/discovery-output/gap-opportunity.md",
+        "Journey: docs/discovery-output/journey.md",
+        "KPIs: docs/discovery-output/kpis-30-60-90.md",
+        "Personas: docs/discovery-output/personas-*.md"
+      ]
+    }
+  ]
+}

@@ -24,12 +24,14 @@ People with diabetes (Type 1 & Type 2) want to train, lose fat, and gain muscle 
 - **T1D Lifter “Alex” (Age 20–40):** Uses CGM/pump, trains 3–5x/week, wants body recomposition without hypos.
 - **T2D Rebuilder “Sam” (Age 30–60):** Uses CGM or fingersticks; wants weight loss, cardio habit, and sustainable meals.
 - **Pre‑diabetic “Jordan” (Age 25–55):** Wants to prevent progression; prefers habit coaching.
+- **Women with PCOS/Insulin Resistance “Maya” (Age 20–45):** Seeks sustainable weight loss and strength with stable energy; may use CGM, fingersticks, or none. Wants low‑glycemic meals, safety‑aware workouts, and clear daily guidance without medical advice.
 - **Coach “Riley”:** Wants dashboards for 5–50 clients (future B2B).
 
 ### 5) Value Proposition
 - **Safety‑aware training**: AI adjusts intensity based on glucose trend & variability
 - **Nutrition that fits the moment**: meals and timing that reflect real‑time glucose state
 - **Daily clarity**: one plan per day, zero guesswork
+- **Metabolic‑aware guidance**: adapts training and meals for insulin resistance and, when relevant, cycle context — strictly within wellness/fitness (no medical claims).
 
 ### 6) Competitive Landscape (high level)
 - Fitness planning apps (Fitbod, Freeletics, Centr): great workouts, **no glucose context**
@@ -46,6 +48,8 @@ People with diabetes (Type 1 & Type 2) want to train, lose fat, and gain muscle 
 **Health‑adjacent (non‑clinical)**
 - Avg. training‑day TIR +5–10% vs. user baseline (self‑reported/connected data)
 - ↓ symptomatic lows during/after workouts (self‑report)
+- Self‑reported post‑meal energy stability on training days (PCOS/IR cohort)
+- Weekly plan adherence for PCOS/IR‑friendly meals/workouts ≥ 60%
 
 **Business**
 - Trial → paid conversion ≥ 7–12%
@@ -61,6 +65,7 @@ People with diabetes (Type 1 & Type 2) want to train, lose fat, and gain muscle 
 - **Regulatory ambiguity** (fitness vs. medical):
   - Strong disclaimers; position as **wellness/fitness guidance**
   - Avoid dosing instructions, diagnostic claims
+  - Avoid clinical/therapeutic claims for PCOS/IR; position as wellness guidance only; no diagnosis/treatment
   - If partnering with covered entities, pursue **BAA** and HIPAA controls
 - **Data privacy/security**:
   - SOC2 path; HIPAA‑aligned controls where appropriate
