@@ -51,3 +51,8 @@ For active adults with diabetes or insulin resistance who want to train safely a
 - Conversion: trial starts, LP CVR, trial→paid
 - Post‑purchase: D1/D7/D30 retention, plan adherence ≥ 60%, NPS
 
+## Regulatory & Safety Notes
+- Product is positioned as a general wellness/fitness guidance tool — no diagnosis/treatment claims; no dosing instructions.
+- Messaging emphasizes education and user‑directed choices (e.g., “learn to train safely,” not “treat/improve disease”).
+- FDA enforcement context: See Whoop warning letter analysis (2025) for boundary examples — https://www.arnoldporter.com/en/perspectives/advisories/2025/09/fda-warning-letter-to-fitness-wearable-sponsor
+- Dexcom exercise tips illustrate data‑driven user decisions (not prescriptive plans) — https://www.dexcom.com/en-us/all-access/managing-diabetes/exercise-tips-from-dietitian

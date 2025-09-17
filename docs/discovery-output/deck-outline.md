@@ -37,7 +37,7 @@ Reference templates: docs/templates/customer-discovery/08-presentation-outline-t
 ## Slide 5 — Opportunity Statement
 - Headline: One‑Sentence Opportunity
 - Statement: For active adults with diabetes or insulin resistance, we will provide safe, consistent progress by adapting workouts and low‑glycemic meals to daily glucose/metabolic context, unlike fitness apps that ignore glucose and tracking apps that stop at logging.
-- Why now: CGM adoption; short‑form fitness education; AI personalization expectations
+ - Why now: CGM adoption (U.S. T1D Exchange registry ~95% CGM use in 2025; 2022 multicenter data show higher youth vs. lower adult CGM use); short‑form fitness education; AI personalization expectations
 
 ## Slide 6 — Brand Brief (Visual)
 - Headline: Caregiver + Hero Archetype; Clear Outcomes
@@ -63,7 +63,7 @@ Reference templates: docs/templates/customer-discovery/08-presentation-outline-t
 - Awareness: CTR to LP 2%/3%/4%
 - Consideration: Opt‑ins 25%/30%/35%; email CTR 8%/10%/12%
 - Conversion: LP CVR 6%/8%/10%; trial→paid 7%/9%/12%
-- Post‑purchase: D1/D7/D30 near 55/30/15; plan adherence ≥ 60%
+- Post‑purchase: D1/D7/D30 near 55/30/15 (ambitious); plan adherence ≥ 60% (aspirational)
 - Link: docs/discovery-output/kpis-30-60-90.md
 
 ## Slide 10 — Closing Takeaway
@@ -92,3 +92,23 @@ Sources
 - KPIs: docs/discovery-output/kpis-30-60-90.md
 - Personas: docs/discovery-output/personas-*.md
 
+Evidence Links (for Slide 2/5/9)
+- Fitbod algorithm (no glucose/diabetes context): https://fitbod.me/blog/fitbod-algorithm/
+- Freeletics official site (no diabetes/CGM features; accessed Oct 2025): https://www.freeletics.com/
+- mySugr scope via diaTribe (logging/coaching, not exercise plans): https://diatribe.org/diabetes-technology/8-apps-improve-your-time-range
+- Dexcom exercise tips (data/alerts guidance; not prescriptive plans): https://www.dexcom.com/en-us/all-access/managing-diabetes/exercise-tips-from-dietitian
+- Supersapiens review (insights; not structured periodization): https://www.myprocoach.net/blog/supersapiens-review/
+- GlucoseZone (exercise content; not CGM‑adaptive periodization): https://diatribe.org/diabetes-technology/glucosezone-exercise-app-people-diabetes
+- CGM adoption (T2D; Mayberry 2023, JGIM): https://link.springer.com/article/10.1007/s11606-023-08222-3
+ - CGM adoption (T1D; T1D Exchange Registry 2025): https://t1dexchange.org/t1d-registry-technology-trends-2025/
+ - CGM adoption by age (T1D; 2022 T1DX-QI multicenter data, Diabetes supplement): https://diabetesjournals.org/diabetes/article/72/Supplement_1/1456-P/150825/1456-P-2022-State-of-Type-1-Diabetes-in-the-U-S
+
+Context note
+- 2025 T1D Exchange figure reflects a registry sample; 2022 T1DX-QI data are EMR-based from 26 U.S. centers. Both show rising adoption with age disparities.
+- Email CTR benchmarks (Salesforce): https://www.salesforce.com/marketing/email/benchmarks/
+- Landing page conversion benchmarks (Landingi): https://landingi.com/landing-page/conversion-rate-a/
+- App retention Day‑30 benchmarks (AppsFlyer via Sendbird): https://sendbird.com/blog/app-retention-benchmarks-broken-down-by-industry
+- FDA enforcement example (Whoop warning letter; Arnold & Porter): https://www.arnoldporter.com/en/perspectives/advisories/2025/09/fda-warning-letter-to-fitness-wearable-sponsor
+
+Open evidence TODO
+- Add direct link to “T1D Exchange – 2022 State of T1D in the US” CGM adoption figures.

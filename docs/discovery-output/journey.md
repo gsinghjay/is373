@@ -35,3 +35,6 @@ Thesis: Lead with founder story and “sugar‑safe/PCOS‑friendly strength” 
 - Referral: shareable wins; creator partnerships
 - Primary KPIs: D1/7/30 retention (align BRD); plan adherence ≥ 60%
 
+### Disclaimers
+- General wellness positioning: educational fitness guidance only; no clinical claims or dosing guidance.
+- Encourage users to consult healthcare providers before changing exercise/fueling routines.

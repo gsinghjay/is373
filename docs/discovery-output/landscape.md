@@ -10,7 +10,8 @@ Note: Add evidence links/screenshots for each item.
 - Funnel Snapshot: TOFU (social ads/blog) → MOFU (trial content) → BOFU (subscribe) → Post (progress tracking)
 - Strengths: Plan quality; UX; content library
 - Weaknesses: No glucose context; no safety rules for diabetes/IR
-- Evidence: [TODO links]
+- Evidence:
+  - Fitbod algorithm overview (no glucose/diabetes context): https://fitbod.me/blog/fitbod-algorithm/
 
 ## Competitor: Freeletics
 - Category: AI coach/app
@@ -20,7 +21,8 @@ Note: Add evidence links/screenshots for each item.
 - Funnel: TOFU (YouTube/social) → MOFU (quiz/email) → BOFU (offer) → Post (programs)
 - Strengths: Personalization feel; brand
 - Weaknesses: No CGM/IR context; generic nutrition
-- Evidence: [TODO links]
+- Evidence:
+  - Freeletics official site (no diabetes/CGM features mentioned; accessed Oct 2025): https://www.freeletics.com/
 
 ## Competitor: MySugr
 - Category: Diabetes logger
@@ -30,7 +32,8 @@ Note: Add evidence links/screenshots for each item.
 - Funnel: TOFU (SEO/app stores) → MOFU (feature pages) → BOFU (install) → Post (logging habits)
 - Strengths: Data entry, reports
 - Weaknesses: Limited fitness coaching; no prescriptive training
-- Evidence: [TODO links]
+- Evidence:
+  - diaTribe roundup (mySugr focus on logging/coaching, not exercise plans): https://diatribe.org/diabetes-technology/8-apps-improve-your-time-range
 
 ## Competitor: Dexcom/LibreView (ecosystem)
 - Category: Device ecosystem/logging
@@ -40,7 +43,9 @@ Note: Add evidence links/screenshots for each item.
 - Funnel: Device → app → portals; partner ecosystem
 - Strengths: Device data; reliability
 - Weaknesses: Not prescriptive; integrations gated
-- Evidence: [TODO links]
+- Evidence:
+  - Dexcom exercise tips (data/alerts guidance; not prescriptive plans): https://www.dexcom.com/en-us/all-access/managing-diabetes/exercise-tips-from-dietitian
+  - Dexcom connected apps (data sync ecosystem): https://www.dexcom.com/en-us/all-access/dexcom-cgm-explained/digital-health-apps
 
 ## Competitor: Supersapiens or Levels
 - Category: CGM‑for‑performance/metabolic
@@ -50,11 +55,12 @@ Note: Add evidence links/screenshots for each item.
 - Funnel: Content → waitlist/trial → subscription → community
 - Strengths: Insight visualizations; content
 - Weaknesses: Limited prescriptive workouts; strength focus gaps
-- Evidence: [TODO links]
+- Evidence:
+  - Supersapiens review (insightful data, not prescriptive training plans): https://www.myprocoach.net/blog/supersapiens-review/
+  - GlucoseZone (exercise content for diabetics; not CGM‑adaptive periodization): https://diatribe.org/diabetes-technology/glucosezone-exercise-app-people-diabetes
 
 ## Summary Takeaways
 - Fitness apps excel at plans but ignore glucose context and safety.
 - Diabetes/metabolic apps excel at data but don’t prescribe training.
 - No clear “CGM‑aware strength periodization” with in‑session safety rules.
 - PCOS/IR segment underserved for practical, strength‑forward guidance without clinical claims.
-
