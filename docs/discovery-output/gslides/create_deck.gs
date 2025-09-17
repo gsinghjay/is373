@@ -171,8 +171,7 @@ function insertTable(slide, headers, rows) {
       table.getCell(r + 1, c).getText().setText(val);
     }
   }
-  // Position table to a central area
-  table.getPageElement().setLeft(50).setTop(140).setWidth(600);
+  // Rely on default placement for the table in this layout.
   return table;
 }
 
