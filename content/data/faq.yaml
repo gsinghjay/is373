@@ -1,0 +1,99 @@
+# RangeFit Frequently Asked Questions
+faq:
+  - id: need-cgm
+    question: "Do I need a CGM (Continuous Glucose Monitor) to use RangeFit?"
+    answer: |
+      No! While you can input glucose readings if you have them, our AI is designed to work
+      just as well by learning from your self-reported energy levels, workout performance,
+      and daily feelings. This makes it a powerful and affordable alternative to expensive CGM-based apps.
+
+  - id: for-beginners
+    question: "I'm a complete beginner to exercise. Is this for me?"
+    answer: |
+      Absolutely. RangeFit is designed for the 'Everyman', not elite athletes. Workouts are
+      simple, require no gym, and can be adjusted to any fitness level. Our goal is progress,
+      not perfection.
+
+  - id: for-my-condition
+    question: "Does this work for PCOS, Pre-diabetes, or Type 2 Diabetes?"
+    answer: |
+      Yes. The core principles of glucose-aware fitness benefit anyone managing insulin
+      resistance, which is a key factor in all these conditions. Our AI adapts to *your*
+      body's unique patterns, regardless of the specific diagnosis.
+
+  - id: different-from-others
+    question: "How is this different from MyFitnessPal or Peloton?"
+    answer: |
+      Those are great apps, but they are 'glucose-unaware'. They don't adapt your exercise
+      based on how it impacts your blood sugar and energy. RangeFit's AI is specifically
+      designed to find workouts that give you stable energy all day, which is a game-changer.
+
+  - id: lose-weight
+    question: "Will I lose weight with RangeFit?"
+    answer: |
+      Many of our members do lose weight, but our primary goal is to help you feel more
+      energized and in control. Weight loss is often a happy side effect of stabilizing
+      your blood sugar and building a consistent fitness habit.
+
+  - id: time-commitment
+    question: "How much time does it take?"
+    answer: |
+      Our plans are designed for busy lives. Most workouts are just 20-30 minutes, 3-4 times
+      per week. We believe consistency is more important than intensity.
+
+  - id: equipment-needed
+    question: "What equipment do I need?"
+    answer: |
+      None! All our workouts are designed to be done at home with just your body weight.
+      As you progress, you might want to add simple items like resistance bands or light
+      dumbbells, but they're completely optional.
+
+  - id: how-ai-works
+    question: "How does the AI personalize my plan?"
+    answer: |
+      Our AI learns from the data you provide - your energy levels, how you felt after workouts,
+      and any glucose readings if you have them. It identifies patterns unique to your body and
+      adjusts your exercise timing, intensity, and type to optimize for stable energy and blood sugar.
+
+  - id: data-privacy
+    question: "Is my health data private and secure?"
+    answer: |
+      Absolutely. We take data privacy seriously. Your health information is encrypted, never
+      sold to third parties, and you can delete your account and all data at any time. We're
+      HIPAA-aware and follow best practices for health data security.
+
+  - id: free-plan-limits
+    question: "What's included in the free plan?"
+    answer: |
+      The free 7-day plan includes 3 glucose-stabilizing workouts, an exercise timing guide,
+      and an energy tracking sheet. It's a complete introduction to glucose-aware fitness
+      with no strings attached - no credit card required!
+
+  - id: when-see-results
+    question: "How soon will I see results?"
+    answer: |
+      Most people notice more stable energy within the first week. Blood sugar improvements
+      can be seen within 2-3 weeks with consistent effort. Long-term metabolic changes typically
+      take 8-12 weeks, but you'll feel the difference much sooner.
+
+  - id: medical-advice
+    question: "Is this medical advice? Should I talk to my doctor?"
+    answer: |
+      RangeFit is an educational and fitness tool, not medical advice. Always consult your
+      healthcare provider before starting any new exercise program, especially if you have
+      diabetes or other medical conditions. We're here to support your fitness journey
+      alongside your medical care.
+
+  - id: cancel-anytime
+    question: "Can I cancel my subscription anytime?"
+    answer: |
+      Yes! If you upgrade to a paid plan, you can cancel anytime with no cancellation fees.
+      The free plan requires no commitment at all - just download and try it out.
+
+  - id: works-with-diet
+    question: "Do I need to follow a special diet?"
+    answer: |
+      No special diet is required. However, exercise and nutrition work together for blood
+      sugar management. Our plans focus on the exercise side, but we do provide general
+      guidance on eating for stable energy. We recommend working with a nutritionist for
+      personalized diet advice.

@@ -1,0 +1,30 @@
+# RangeFit Testimonials
+testimonials:
+  - id: sarah-c
+    name: "Sarah C."
+    location: "Teacher with PCOS"
+    rating: 5
+    order: 1
+    quote: |
+      I've tried so many workout apps, but they always left me exhausted. This is the
+      first one that made me feel *more* energized, not less. I didn't crash at 3pm
+      for the first time in months.
+
+  - id: maria-t
+    name: "Maria T."
+    location: "Pre-diabetic"
+    rating: 5
+    order: 2
+    quote: |
+      I wanted to try Signos but $130/month? No way. RangeFit does the same thing for
+      10x less. My fasting glucose dropped 12 points in the first three weeks.
+      My doctor was shocked.
+
+  - id: jen-k
+    name: "Jen K."
+    location: "Managing Type 2 Diabetes"
+    rating: 5
+    order: 3
+    quote: |
+      The community alone is worth the price. It's so encouraging to talk to people
+      who just *get it*. I finally feel like I'm not doing this alone.

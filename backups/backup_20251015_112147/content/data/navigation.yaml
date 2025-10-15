@@ -1,0 +1,31 @@
+# RangeFit Navigation Configuration
+main_nav:
+  - title: "How It Works"
+    url: "#how-it-works"
+    id: "how-it-works"
+  - title: "Pricing"
+    url: "#pricing"
+    id: "pricing"
+  - title: "Testimonials"
+    url: "#testimonials"
+    id: "testimonials"
+  - title: "Community"
+    url: "#community"
+    id: "community"
+  - title: "Get Your Free Plan"
+    url: "#free-plan"
+    id: "free-plan"
+    highlight: true # This will style it as a primary button
+
+footer_nav:
+  company:
+    title: "Quick Links"
+    links:
+      - title: "How It Works"
+        url: "#how-it-works"
+      - title: "Pricing"
+        url: "#pricing"
+      - title: "Testimonials"
+        url: "#testimonials"
+      - title: "Get Your Free Plan"
+        url: "#free-plan"

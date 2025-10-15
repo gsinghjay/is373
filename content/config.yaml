@@ -1,0 +1,55 @@
+# Site Configuration for RangeFit
+site:
+  title: "RangeFit"
+  tagline: "AI Glucose Fitness for Everyday People"
+  description: "Affordable, adaptive AI-powered fitness coaching for people with diabetes, pre-diabetes, or PCOS. Feel more energized, confident, and in control of your health. Start with our free 7-day plan."
+  url: "https://your-domain.com" # Replace with your actual domain when you have one
+  author: "Jay Singh"
+  language: "en"
+
+  # Contact Information
+  phone: "" # Add your business phone if you have one
+  phone_raw: ""
+  email: "jay@rangefit.com" # Replace with your actual contact email
+  whatsapp: "" # Add your WhatsApp number if you use it
+
+  # Location (Online service - generic location for SEO)
+  location:
+    city: "United States"
+    region: "Online"
+    coordinates:
+      latitude: 39.8283
+      longitude: -98.5795
+
+  # Social Media (fill these in with your actual URLs)
+  social:
+    facebook: ""
+    instagram: ""
+    linkedin: ""
+    twitter: ""
+    tiktok: "https://tiktok.com/@your-rangefit-handle" # Important for your strategy
+
+  # SEO Keywords for RangeFit
+  keywords:
+    - "glucose-aware fitness"
+    - "AI fitness coaching"
+    - "PCOS workout"
+    - "diabetes exercise"
+    - "pre-diabetes fitness"
+    - "insulin resistance workout"
+    - "affordable CGM alternative"
+    - "RangeFit"
+
+# Build Configuration (No changes needed here)
+build:
+  output_dir: "docs"
+  static_dir: "static"
+  template_dir: "templates"
+
+# Feature Flags
+features:
+  show_blog: false
+  show_testimonials: true
+  show_whatsapp_float: true # Keep this if you use WhatsApp
+  show_pricing: true
+  enable_analytics: false

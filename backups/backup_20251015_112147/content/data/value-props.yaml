@@ -1,0 +1,25 @@
+# RangeFit Key Differentiators
+value_props:
+  - id: adaptive-ai
+    title: "Truly Adaptive AI"
+    icon: "fa-robot"
+    order: 1
+    description: |
+      Our AI learns from your glucose patterns and energy levels to create workouts
+      that work *with* your body, not against it.
+
+  - id: affordable-pricing
+    title: "10x More Affordable"
+    icon: "fa-hand-holding-usd"
+    order: 2
+    description: |
+      Get premium glucose-aware fitness coaching for the price of a few coffees,
+      not a car payment. Just $14.99/month.
+
+  - id: community-focus
+    title: "A Community That Gets It"
+    icon: "fa-users"
+    order: 3
+    description: |
+      Join thousands of people just like you. Share wins, ask questions, and get
+      support from a community on the same journey.

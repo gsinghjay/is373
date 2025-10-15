@@ -1,0 +1,37 @@
+# Why Choose RangeFit - The "Everyman" Approach
+why_choose:
+  section_title: "Fitness That Feels Like It's Made For You"
+
+  reasons:
+    - id: for-real-people
+      title: "For Real People, Not Elite Athletes"
+      icon: "fa-user-friends"
+      image: "images/about/rangefit-community.jpg" # You will need to add this image
+      image_alt: "A diverse group of everyday people smiling and supporting each other"
+      order: 1
+      description: |
+        We're not about 'crushing goals' or 'elite performance'. We're about feeling
+        good, having more energy, and building a sustainable, healthy habit.
+        Progress, not perfection.
+
+    - id: simple-science
+      title: "Simple Science, Not Clinical Jargon"
+      icon: "fa-lightbulb"
+      image: "images/about/rangefit-simple.jpg" # You will need to add this image
+      image_alt: "A simple, clean interface on a phone showing an energy graph"
+      order: 2
+      description: |
+        We handle the complex science of glucose and exercise so you don't have to.
+        Our app gives you simple, actionable guidance that's easy to understand
+        and follow.
+
+    - id: unity-and-belonging
+      title: "Unity and Belonging"
+      icon: "fa-heart"
+      image: "images/about/rangefit-support.jpg" # You will need to add this image
+      image_alt: "Two friends encouraging each other during a home workout"
+      order: 3
+      description: |
+        Unlike intimidating clinical apps, RangeFit is built on the principle of
+        unity. Join a community where you belong, feel understood, and get cheered on
+        every step of the way.

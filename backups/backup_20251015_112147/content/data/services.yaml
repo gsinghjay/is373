@@ -1,0 +1,52 @@
+# RangeFit Offers / Pricing Tiers
+services:
+  - id: free-plan
+    title: "Free 7-Day Plan"
+    icon: "fa-leaf" # Represents a gentle start
+    price: "Free"
+    price_period: "PDF Download"
+    badge: "Start Here"
+    order: 1
+    description: |
+      Get a feel for glucose-friendly fitness with our 7-day introductory plan.
+      No commitment, no app required.
+    features:
+      - "3 glucose-stabilizing workouts"
+      - "Exercise timing guide for stable energy"
+      - "Simple energy tracking sheet"
+      - "Delivered instantly as a PDF"
+      - "The perfect first step"
+
+  - id: premium-plan
+    title: "RangeFit Premium"
+    icon: "fa-robot" # Represents the AI
+    price: "$14.99"
+    price_period: "per month"
+    badge: "Full Power"
+    order: 2
+    description: |
+      Unlock the full power of our adaptive AI, personalized coaching, and supportive
+      community.
+    features:
+      - "AI-Personalized Workouts"
+      - "Full Workout Library Access"
+      - "Progress & Glucose Pattern Tracking"
+      - "Private Community Access (Discord)"
+      - "Direct Support & Motivation"
+
+  - id: pro-plan
+    title: "RangeFit Pro"
+    icon: "fa-chart-line" # Represents advanced analytics
+    price: "$24.99"
+    price_period: "per month"
+    badge: null
+    order: 3
+    description: |
+      For those who want advanced analytics, live coaching, and priority support to
+      accelerate their results.
+    features:
+      - "Everything in Premium, plus:"
+      - "Advanced Analytics Dashboard"
+      - "Monthly Live Group Coaching Calls"
+      - "Priority Support Queue"
+      - "Beta Access to New Features"

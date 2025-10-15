@@ -1,0 +1,42 @@
+# RangeFit Frequently Asked Questions
+faq:
+  - id: need-cgm
+    question: "Do I need a CGM (Continuous Glucose Monitor) to use RangeFit?"
+    answer: |
+      No! While you can input glucose readings if you have them, our AI is designed to work
+      just as well by learning from your self-reported energy levels, workout performance,
+      and daily feelings. This makes it a powerful and affordable alternative to expensive CGM-based apps.
+
+  - id: for-beginners
+    question: "I'm a complete beginner to exercise. Is this for me?"
+    answer: |
+      Absolutely. RangeFit is designed for the 'Everyman', not elite athletes. Workouts are
+      simple, require no gym, and can be adjusted to any fitness level. Our goal is progress,
+      not perfection.
+
+  - id: for-my-condition
+    question: "Does this work for PCOS, Pre-diabetes, or Type 2 Diabetes?"
+    answer: |
+      Yes. The core principles of glucose-aware fitness benefit anyone managing insulin
+      resistance, which is a key factor in all these conditions. Our AI adapts to *your*
+      body's unique patterns, regardless of the specific diagnosis.
+
+  - id: different-from-others
+    question: "How is this different from MyFitnessPal or Peloton?"
+    answer: |
+      Those are great apps, but they are 'glucose-unaware'. They don't adapt your exercise
+      based on how it impacts your blood sugar and energy. RangeFit's AI is specifically
+      designed to find workouts that give you stable energy all day, which is a game-changer.
+
+  - id: lose-weight
+    question: "Will I lose weight with RangeFit?"
+    answer: |
+      Many of our members do lose weight, but our primary goal is to help you feel more
+      energized and in control. Weight loss is often a happy side effect of stabilizing
+      your blood sugar and building a consistent fitness habit.
+
+  - id: time-commitment
+    question: "How much time does it take?"
+    answer: |
+      Our plans are designed for busy lives. Most workouts are just 20-30 minutes, 3-4 times
+      per week. We believe consistency is more important than intensity.
