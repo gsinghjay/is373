@@ -1,0 +1,281 @@
+{% comment %}
+  FAQ Section - Accordion-style Questions & Answers
+
+  Features:
+  - Collapsible accordion items
+  - Customizable section title
+  - Repeatable FAQ blocks
+  - JavaScript-powered expand/collapse
+  - Accessible (aria attributes)
+{% endcomment %}
+
+<section class="section faq-section" id="faq">
+  <div class="container">
+    {% if section.settings.section_title != blank %}
+      <h2 class="section-title text-center">{{ section.settings.section_title }}</h2>
+    {% endif %}
+
+    {% if section.settings.section_subtitle != blank %}
+      <p class="section-subtitle text-center">{{ section.settings.section_subtitle }}</p>
+    {% endif %}
+
+    <div class="faq-container">
+      {% if section.blocks.size > 0 %}
+        <div class="faq-list">
+          {% for block in section.blocks %}
+            {% if block.type == 'faq_item' %}
+              <div class="faq-item" {{ block.shopify_attributes }}>
+                <button class="faq-question" aria-expanded="false" type="button">
+                  <span class="faq-question-text">{{ block.settings.question }}</span>
+                  <span class="faq-icon" aria-hidden="true">
+                    <i class="fas fa-chevron-down"></i>
+                  </span>
+                </button>
+                <div class="faq-answer">
+                  <div class="faq-answer-content">
+                    {{ block.settings.answer }}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="faq-placeholder text-center">
+          <p>Add FAQ items using the Theme Editor</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<script>
+  // FAQ Accordion functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(function(question) {
+      question.addEventListener('click', function() {
+        const isOpen = this.getAttribute('aria-expanded') === 'true';
+        const answer = this.nextElementSibling;
+
+        // Close all other FAQs (optional - remove to allow multiple open)
+        faqQuestions.forEach(function(q) {
+          if (q !== question) {
+            q.setAttribute('aria-expanded', 'false');
+            q.nextElementSibling.style.maxHeight = null;
+            q.querySelector('.faq-icon i').classList.remove('fa-chevron-up');
+            q.querySelector('.faq-icon i').classList.add('fa-chevron-down');
+          }
+        });
+
+        // Toggle current FAQ
+        if (isOpen) {
+          this.setAttribute('aria-expanded', 'false');
+          answer.style.maxHeight = null;
+          this.querySelector('.faq-icon i').classList.remove('fa-chevron-up');
+          this.querySelector('.faq-icon i').classList.add('fa-chevron-down');
+        } else {
+          this.setAttribute('aria-expanded', 'true');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          this.querySelector('.faq-icon i').classList.remove('fa-chevron-down');
+          this.querySelector('.faq-icon i').classList.add('fa-chevron-up');
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .faq-section {
+    background-color: white;
+  }
+
+  .faq-container {
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .faq-item {
+    background: white;
+    border: 2px solid var(--color-border, #e2e8f0);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    border-color: var(--color-primary, #38b2ff);
+    box-shadow: 0 4px 12px rgba(56, 178, 255, 0.1);
+  }
+
+  .faq-question {
+    width: 100%;
+    padding: 1.5rem;
+    text-align: left;
+    background: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text-dark, #1a202c);
+    transition: background-color 0.2s ease;
+  }
+
+  .faq-question:hover {
+    background-color: var(--color-bg-light, #f8fafc);
+  }
+
+  .faq-question:focus {
+    outline: 2px solid var(--color-primary, #38b2ff);
+    outline-offset: -2px;
+  }
+
+  .faq-icon {
+    flex-shrink: 0;
+    color: var(--color-primary, #38b2ff);
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-question[aria-expanded="true"] .faq-icon {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .faq-answer-content {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    color: var(--color-text, #4a5568);
+    line-height: 1.7;
+    font-size: 0.9375rem;
+  }
+
+  .faq-answer-content p {
+    margin: 0;
+  }
+
+  .faq-placeholder {
+    padding: 3rem 1rem;
+    color: var(--color-text-light, #a0aec0);
+  }
+
+  @media (max-width: 767px) {
+    .faq-container {
+      margin-top: 2rem;
+    }
+
+    .faq-question {
+      padding: 1.25rem;
+      font-size: 1rem;
+    }
+
+    .faq-answer-content {
+      padding: 0 1.25rem 1.25rem 1.25rem;
+      font-size: 0.875rem;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "FAQ",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "text",
+      "id": "section_subtitle",
+      "label": "Section Subtitle",
+      "default": "Everything you need to know about RangeFit"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "How does RangeFit work?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>RangeFit uses AI to personalize workouts based on your glucose patterns. Simply log your energy levels before and after workouts, and our AI learns what works best for your body.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ",
+      "blocks": [
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "How does RangeFit work?",
+            "answer": "<p>RangeFit uses AI to personalize workouts based on your glucose patterns. Simply log your energy levels before and after workouts, and our AI learns what works best for your body.</p>"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I cancel anytime?",
+            "answer": "<p>Yes! You can cancel your subscription anytime with no fees or penalties. Your access will continue until the end of your billing period.</p>"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is RangeFit suitable for beginners?",
+            "answer": "<p>Absolutely! RangeFit is designed for all fitness levels. Our workouts include modifications for beginners, and the AI adapts to your current fitness level.</p>"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do I need special equipment?",
+            "answer": "<p>Most RangeFit workouts require no equipment. Some optional workouts use basic items like resistance bands or light dumbbells, but bodyweight alternatives are always provided.</p>"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "How is this different from regular fitness apps?",
+            "answer": "<p>RangeFit is specifically designed for people with PCOS, pre-diabetes, and insulin resistance. We focus on glucose-friendly workouts that stabilize energy rather than spike and crash it.</p>"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "What's included in the free 7-day plan?",
+            "answer": "<p>The free plan includes 3 glucose-stabilizing workouts, an exercise timing guide, and an energy tracking sheet delivered instantly as a PDF.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

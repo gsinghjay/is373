@@ -1,0 +1,83 @@
+{% comment %}
+  RangeFit Value Propositions Section
+{% endcomment %}
+
+<section class="value-props py-5xl">
+  <div class="container">
+    <div class="value-props-grid grid grid-auto-fit-lg gap-lg">
+      {% for block in section.blocks %}
+        <div class="value-prop-card" {{ block.shopify_attributes }}>
+          <div class="value-prop-icon">
+            <i class="{{ block.settings.icon }}"></i>
+          </div>
+          <h3 class="value-prop-title">{{ block.settings.title }}</h3>
+          <p class="value-prop-description">{{ block.settings.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Value Propositions",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "value_prop",
+      "name": "Value Proposition",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Font Awesome Icon Class",
+          "default": "fas fa-robot"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Truly Adaptive AI"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Our AI learns from your glucose patterns and energy levels."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Value Propositions",
+      "blocks": [
+        {
+          "type": "value_prop",
+          "settings": {
+            "icon": "fas fa-robot",
+            "title": "Truly Adaptive AI",
+            "description": "Our AI learns from your glucose patterns and energy levels to create workouts that work with your body, not against it."
+          }
+        },
+        {
+          "type": "value_prop",
+          "settings": {
+            "icon": "fas fa-hand-holding-usd",
+            "title": "10x More Affordable",
+            "description": "Get premium glucose-aware fitness coaching for the price of a few coffees, not a car payment. Just $14.99/month."
+          }
+        },
+        {
+          "type": "value_prop",
+          "settings": {
+            "icon": "fas fa-users",
+            "title": "A Community That Gets It",
+            "description": "Join thousands of people just like you. Share wins, ask questions, and get support from a community on the same journey."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

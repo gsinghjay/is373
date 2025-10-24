@@ -1,0 +1,290 @@
+{% comment %}
+  Testimonials Section - Customer Reviews & Social Proof
+
+  Features:
+  - Star rating display
+  - Customer name, role, and photo (optional)
+  - Responsive grid layout
+  - Customizable section title
+  - Repeatable testimonial blocks
+{% endcomment %}
+
+<section class="section testimonials-section" id="testimonials">
+  <div class="container">
+    {% if section.settings.section_title != blank %}
+      <h2 class="section-title text-center">{{ section.settings.section_title }}</h2>
+    {% endif %}
+
+    {% if section.settings.section_subtitle != blank %}
+      <p class="section-subtitle text-center">{{ section.settings.section_subtitle }}</p>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+      <div class="testimonials-grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'testimonial' %}
+            <div class="testimonial-card card" {{ block.shopify_attributes }}>
+              {%- comment -%} Star Rating {%- endcomment -%}
+              {% if block.settings.rating > 0 %}
+                <div class="testimonial-rating">
+                  {% for i in (1..5) %}
+                    {% if i <= block.settings.rating %}
+                      <i class="fas fa-star star-filled"></i>
+                    {% else %}
+                      <i class="far fa-star star-empty"></i>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              {% endif %}
+
+              {%- comment -%} Testimonial Text {%- endcomment -%}
+              {% if block.settings.text != blank %}
+                <blockquote class="testimonial-text">
+                  "{{ block.settings.text }}"
+                </blockquote>
+              {% endif %}
+
+              {%- comment -%} Customer Info {%- endcomment -%}
+              <div class="testimonial-author">
+                {% if block.settings.image != blank %}
+                  <div class="testimonial-image">
+                    <img
+                      src="{{ block.settings.image | image_url: width: 80 }}"
+                      alt="{{ block.settings.author }}"
+                      loading="lazy"
+                      width="60"
+                      height="60"
+                    >
+                  </div>
+                {% else %}
+                  <div class="testimonial-avatar">
+                    <i class="fas fa-user"></i>
+                  </div>
+                {% endif %}
+
+                <div class="testimonial-author-info">
+                  {% if block.settings.author != blank %}
+                    <cite class="testimonial-author-name">{{ block.settings.author }}</cite>
+                  {% endif %}
+                  {% if block.settings.role != blank %}
+                    <span class="testimonial-author-role">{{ block.settings.role }}</span>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="testimonials-placeholder text-center">
+        <p>Add testimonials using the Theme Editor</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+  .testimonials-section {
+    background-color: white;
+    padding-top: 3rem;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 767px) {
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: white;
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .testimonial-rating {
+    display: flex;
+    gap: 0.25rem;
+    font-size: 1.125rem;
+    justify-content: flex-end;
+  }
+
+  .star-filled {
+    color: var(--color-accent, #f59e0b);
+  }
+
+  .star-empty {
+    color: var(--color-border, #e2e8f0);
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text, #4a5568);
+    font-style: italic;
+    margin: 0;
+    flex: 1;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border, #e2e8f0);
+  }
+
+  .testimonial-image img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .testimonial-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-primary-light, #e0f2fe);
+    color: var(--color-primary, #38b2ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+
+  .testimonial-author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .testimonial-author-name {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-text-dark, #1a202c);
+    font-style: normal;
+  }
+
+  .testimonial-author-role {
+    font-size: 0.875rem;
+    color: var(--color-text-light, #718096);
+  }
+
+  .testimonials-placeholder {
+    padding: 3rem 1rem;
+    color: var(--color-text-light, #a0aec0);
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "What Our Members Say"
+    },
+    {
+      "type": "text",
+      "id": "section_subtitle",
+      "label": "Section Subtitle",
+      "default": "Real results from real people managing their glucose and energy"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Star Rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Testimonial Text",
+          "default": "RangeFit completely changed how I approach fitness. No more energy crashes after workouts!"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author Name",
+          "default": "Sarah M."
+        },
+        {
+          "type": "text",
+          "id": "role",
+          "label": "Author Role/Info",
+          "default": "Premium Member, PCOS Warrior"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Author Photo (Optional)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials",
+      "blocks": [
+        {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "I've tried so many fitness apps, but RangeFit is the first one that actually understands my body. The AI recommendations are spot-on, and I haven't had an energy crash in weeks!",
+            "author": "Sarah M.",
+            "role": "Premium Member, PCOS Warrior"
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "As someone with pre-diabetes, finding the right workout timing was always a struggle. RangeFit takes the guesswork out. I finally feel in control of my energy levels.",
+            "author": "Jessica L.",
+            "role": "Premium Member"
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "The community is amazing! It's so helpful to connect with others who understand the glucose-fitness connection. Plus, the workouts are actually fun and doable!",
+            "author": "Maria G.",
+            "role": "Pro Member, 6 Months Strong"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,80 @@
+{% comment %} RangeFit Header {% endcomment %}
+
+<header class="header" id="header">
+  <div class="container">
+    <div class="header-content flex justify-between items-center">
+      <a href="{{ routes.root_url }}" class="logo inline-block">
+        <span class="logo-text flex items-center">
+          {% if section.settings.logo != blank %}
+            {{ section.settings.logo | image_url: width: 200 | image_tag:
+              alt: shop.name,
+              class: 'logo-image',
+              height: '30'
+            }}
+          {% else %}
+            <strong>{{ shop.name }}</strong>
+          {% endif %}
+        </span>
+      </a>
+
+      <nav class="nav flex items-center" id="main-nav" aria-label="Main navigation" role="navigation">
+        {% for link in section.settings.menu.links %}
+          <a href="{{ link.url }}" class="nav-link">{{ link.title }}</a>
+        {% endfor %}
+
+        {% if section.settings.cta_text != blank %}
+          <a href="{{ section.settings.cta_link }}" class="nav-link btn btn-primary">
+            {{ section.settings.cta_text }}
+          </a>
+        {% endif %}
+
+        {%- # Cart Icon -%}
+        <a href="{{ routes.cart_url }}" class="nav-link">
+          <i class="fas fa-shopping-cart"></i>
+          {% if cart.item_count > 0 %}
+            <sup>{{ cart.item_count }}</sup>
+          {% endif %}
+        </a>
+      </nav>
+
+      <button class="mobile-menu-toggle"
+              aria-label="Toggle mobile menu"
+              aria-expanded="false"
+              aria-controls="main-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo Image"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Button Text",
+      "default": "Get Your Free Plan"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA Button Link"
+    }
+  ]
+}
+{% endschema %}

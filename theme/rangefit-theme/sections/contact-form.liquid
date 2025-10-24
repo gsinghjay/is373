@@ -1,0 +1,414 @@
+{% comment %}
+  Contact/Lead Capture Form Section
+
+  Features:
+  - Email capture for free 7-day plan
+  - Name + Email fields
+  - Privacy-friendly (GDPR compliant)
+  - Success message display
+  - Integration-ready (Shopify customer or ConvertKit)
+  - Customizable CTA button
+{% endcomment %}
+
+<section class="section contact-form-section" id="contact">
+  <div class="container">
+    {%- comment -%} Section Header {%- endcomment -%}
+    <div class="contact-form-header text-center">
+      {% if section.settings.section_title != blank %}
+        <h2 class="section-title">{{ section.settings.section_title }}</h2>
+      {% endif %}
+
+      {% if section.settings.section_subtitle != blank %}
+        <p class="section-subtitle">{{ section.settings.section_subtitle }}</p>
+      {% endif %}
+    </div>
+
+    <div class="contact-form-wrapper">
+      {%- comment -%} Form Container {%- endcomment -%}
+      <div class="contact-form-container">
+        {% form 'contact', class: 'contact-form', id: 'contact-form' %}
+          {%- comment -%} Success Message {%- endcomment -%}
+          {% if form.posted_successfully? %}
+            <div class="form-success-message">
+              <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h3>{{ section.settings.success_title }}</h3>
+              <p>{{ section.settings.success_message }}</p>
+            </div>
+          {% endif %}
+
+          {%- comment -%} Error Messages {%- endcomment -%}
+          {% if form.errors %}
+            <div class="form-errors">
+              <p class="form-error-heading">
+                <i class="fas fa-exclamation-circle"></i>
+                Please correct the following:
+              </p>
+              <ul>
+                {% for field in form.errors %}
+                  <li>{{ field | capitalize }} {{ form.errors.messages[field] }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+
+          {%- comment -%} Form Fields {%- endcomment -%}
+          {% unless form.posted_successfully? %}
+            <div class="form-fields">
+              {%- comment -%} First Name {%- endcomment -%}
+              <div class="form-group">
+                <label for="contact-name" class="form-label">
+                  First Name <span class="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="contact[name]"
+                  class="form-input"
+                  placeholder="Enter your first name"
+                  required
+                  value="{% if form.name %}{{ form.name }}{% endif %}"
+                >
+              </div>
+
+              {%- comment -%} Email Address {%- endcomment -%}
+              <div class="form-group">
+                <label for="contact-email" class="form-label">
+                  Email Address <span class="required">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="contact[email]"
+                  class="form-input"
+                  placeholder="your.email@example.com"
+                  required
+                  value="{% if form.email %}{{ form.email }}{% endif %}"
+                >
+              </div>
+
+              {%- comment -%} Hidden field to identify lead source {%- endcomment -%}
+              <input type="hidden" name="contact[subject]" value="Free 7-Day Plan Download">
+              <input type="hidden" name="contact[body]" value="Requested free 7-day workout plan from landing page">
+
+              {%- comment -%} Submit Button {%- endcomment -%}
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">
+                  {% if section.settings.button_text != blank %}
+                    {{ section.settings.button_text }}
+                  {% else %}
+                    Download Free Plan
+                  {% endif %}
+                </button>
+              </div>
+
+              {%- comment -%} Privacy Notice {%- endcomment -%}
+              <p class="form-privacy-notice">
+                {% if section.settings.privacy_text != blank %}
+                  {{ section.settings.privacy_text }}
+                {% else %}
+                  By submitting this form, you agree to receive emails from RangeFit.
+                  We respect your privacy. Unsubscribe anytime.
+                  <a href="/pages/privacy-policy">Privacy Policy</a>
+                {% endif %}
+              </p>
+            </div>
+          {% endunless %}
+        {% endform %}
+      </div>
+
+      {%- comment -%} Optional Features List {%- endcomment -%}
+      {% if section.settings.show_features %}
+        <div class="contact-features">
+          {% if section.blocks.size > 0 %}
+            <ul class="features-list">
+              {% for block in section.blocks %}
+                {% if block.type == 'feature' %}
+                  <li class="feature-item" {{ block.shopify_attributes }}>
+                    {% if block.settings.icon != blank %}
+                      <i class="{{ block.settings.icon }}"></i>
+                    {% else %}
+                      <i class="fas fa-check"></i>
+                    {% endif %}
+                    <span>{{ block.settings.text }}</span>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-form-section {
+    background: linear-gradient(135deg, var(--color-primary-light, #e0f2fe) 0%, white 100%);
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .contact-form-section .container {
+    margin-bottom: 0 !important;
+  }
+
+  .contact-form-header {
+    padding-top: 3rem;
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-form-wrapper {
+    margin: 0 auto;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .contact-form-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 767px) {
+    .contact-form-container {
+      padding: 1.5rem;
+    }
+  }
+
+  .form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-label {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--color-text-dark, #1a202c);
+  }
+
+  .required {
+    color: var(--color-error, #ef4444);
+  }
+
+  .form-input {
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--color-border, #e2e8f0);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-color: var(--color-primary, #38b2ff);
+    box-shadow: 0 0 0 3px rgba(56, 178, 255, 0.1);
+  }
+
+  .form-input::placeholder {
+    color: var(--color-text-light, #a0aec0);
+  }
+
+  .btn-block {
+    width: 100%;
+  }
+
+  .form-privacy-notice {
+    font-size: 0.75rem;
+    color: var(--color-text-light, #718096);
+    text-align: center;
+    line-height: 1.4;
+    margin-top: 0.5rem;
+  }
+
+  .form-privacy-notice a {
+    color: var(--color-primary, #38b2ff);
+    text-decoration: underline;
+  }
+
+  .form-success-message {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .success-icon {
+    font-size: 4rem;
+    color: var(--color-success, #10b981);
+    margin-bottom: 1rem;
+  }
+
+  .form-success-message h3 {
+    font-size: 1.5rem;
+    color: var(--color-text-dark, #1a202c);
+    margin-bottom: 0.5rem;
+  }
+
+  .form-success-message p {
+    color: var(--color-text, #4a5568);
+    font-size: 1rem;
+  }
+
+  .form-errors {
+    background-color: #fef2f2;
+    border: 2px solid #ef4444;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-error-heading {
+    color: #991b1b;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .form-errors ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    color: #991b1b;
+  }
+
+  .contact-features {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--color-text, #4a5568);
+  }
+
+  .feature-item i {
+    color: var(--color-success, #10b981);
+    font-size: 1rem;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Contact Form",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Get Your Free 7-Day Plan"
+    },
+    {
+      "type": "textarea",
+      "id": "section_subtitle",
+      "label": "Section Subtitle",
+      "default": "Start your glucose-friendly fitness journey today. No credit card required."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Download Free Plan"
+    },
+    {
+      "type": "text",
+      "id": "success_title",
+      "label": "Success Message Title",
+      "default": "Check Your Email!"
+    },
+    {
+      "type": "textarea",
+      "id": "success_message",
+      "label": "Success Message",
+      "default": "Your free 7-day workout plan is on its way to your inbox. Check your email (and spam folder) in the next few minutes."
+    },
+    {
+      "type": "textarea",
+      "id": "privacy_text",
+      "label": "Privacy Notice Text",
+      "default": "By submitting this form, you agree to receive emails from RangeFit. We respect your privacy. Unsubscribe anytime."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_features",
+      "label": "Show Features List",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon Class (Font Awesome)",
+          "default": "fas fa-check",
+          "info": "Example: fas fa-dumbbell, fas fa-heart, fas fa-users"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Feature Text",
+          "default": "Instant PDF delivery"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact Form",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "icon": "fas fa-file-pdf",
+            "text": "Instant PDF delivery"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "icon": "fas fa-lock",
+            "text": "No credit card required"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "icon": "fas fa-envelope-open-text",
+            "text": "7-day email support series"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

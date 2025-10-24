@@ -1,0 +1,148 @@
+{% comment %}
+  RangeFit Hero Section
+  Displays the main hero with CTA buttons and trust bar
+{% endcomment %}
+
+<section class="hero dark-context flex items-start justify-center"
+         style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ section.settings.hero_image | img_url: '2000x' }}');">
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ section.settings.hero_title }}</h1>
+      <p class="hero-subtitle">{{ section.settings.hero_subtitle }}</p>
+
+      <div class="hero-buttons flex justify-center items-center flex-wrap">
+        {% if section.settings.primary_button_text != blank %}
+          <a href="{{ section.settings.primary_button_link }}" class="btn btn-primary">
+            <i class="fas fa-download"></i> {{ section.settings.primary_button_text }}
+          </a>
+        {% endif %}
+
+        {% if section.settings.secondary_button_text != blank %}
+          <a href="{{ section.settings.secondary_button_link }}" class="btn btn-outline">
+            <i class="fas fa-dollar-sign"></i> {{ section.settings.secondary_button_text }}
+          </a>
+        {% endif %}
+      </div>
+
+      {%- # Trust Bar -%}
+      <div class="hero-trust-bar flex justify-center items-center flex-wrap">
+        {% for block in section.blocks %}
+          <div class="trust-item flex items-center" {{ block.shopify_attributes }}>
+            <i class="{{ block.settings.icon }}"></i>
+            <span>{{ block.settings.text }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero Title",
+      "default": "Get Energy That Lasts All Day"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_subtitle",
+      "label": "Hero Subtitle",
+      "default": "The free 7-day glucose-friendly workout plan for people managing blood sugar."
+    },
+    {
+      "type": "text",
+      "id": "primary_button_text",
+      "label": "Primary Button Text",
+      "default": "Get My Free Plan"
+    },
+    {
+      "type": "url",
+      "id": "primary_button_link",
+      "label": "Primary Button Link"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_text",
+      "label": "Secondary Button Text",
+      "default": "See Pricing"
+    },
+    {
+      "type": "url",
+      "id": "secondary_button_link",
+      "label": "Secondary Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "trust_item",
+      "name": "Trust Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Font Awesome Icon Class",
+          "default": "fas fa-leaf",
+          "info": "Example: fas fa-leaf, fas fa-robot, fas fa-heart"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Beginner Friendly"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero",
+      "blocks": [
+        {
+          "type": "trust_item",
+          "settings": {
+            "icon": "fas fa-leaf",
+            "text": "Beginner Friendly"
+          }
+        },
+        {
+          "type": "trust_item",
+          "settings": {
+            "icon": "fas fa-robot",
+            "text": "AI-Powered"
+          }
+        },
+        {
+          "type": "trust_item",
+          "settings": {
+            "icon": "fas fa-heart",
+            "text": "Science-Backed"
+          }
+        },
+        {
+          "type": "trust_item",
+          "settings": {
+            "icon": "fas fa-users",
+            "text": "2,000+ Members"
+          }
+        },
+        {
+          "type": "trust_item",
+          "settings": {
+            "icon": "fas fa-shield-alt",
+            "text": "100% Free Plan"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

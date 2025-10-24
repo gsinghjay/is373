@@ -1,0 +1,81 @@
+{% comment %} RangeFit Footer {% endcomment %}
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      {%- # Company Info -%}
+      <div class="footer-section">
+        <h3 class="footer-title">{{ shop.name }}</h3>
+        {% if section.settings.footer_description != blank %}
+          <p class="footer-text">{{ section.settings.footer_description }}</p>
+        {% endif %}
+        <div class="footer-contact">
+          {% if section.settings.phone != blank %}
+            <p><strong>Phone:</strong> <a href="tel:{{ section.settings.phone }}">{{ section.settings.phone }}</a></p>
+          {% endif %}
+          {% if section.settings.email != blank %}
+            <p><strong>Email:</strong> <a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a></p>
+          {% endif %}
+          {% if section.settings.location != blank %}
+            <p><strong>Location:</strong> {{ section.settings.location }}</p>
+          {% endif %}
+        </div>
+      </div>
+
+      {%- # Quick Links -%}
+      <div class="footer-section">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          {% for link in section.settings.menu.links %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    {%- # Copyright -%}
+    <div class="footer-bottom flex flex-col items-center">
+      <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.</p>
+      <p class="footer-back-top">
+        <a href="#header" class="back-to-top">Back to Top ↑</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "footer_description",
+      "label": "Footer Description",
+      "default": "AI Glucose Fitness for Everyday People"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone Number"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email Address",
+      "default": "hello@rangefit.com"
+    },
+    {
+      "type": "text",
+      "id": "location",
+      "label": "Location",
+      "default": "United States, Online"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Footer Menu",
+      "default": "footer"
+    }
+  ]
+}
+{% endschema %}

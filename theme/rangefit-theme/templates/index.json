@@ -1,0 +1,265 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "hero_title": "Get Energy That Lasts All Day",
+        "hero_subtitle": "The free 7-day glucose-friendly workout plan for people managing blood sugar. No expensive CGM, no gym, no one-size-fits-all advice.",
+        "primary_button_text": "Get My Free Plan",
+        "primary_button_link": "#pricing",
+        "secondary_button_text": "See Pricing",
+        "secondary_button_link": "#pricing"
+      },
+      "blocks": {
+        "trust_1": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "fas fa-leaf",
+            "text": "Beginner Friendly"
+          }
+        },
+        "trust_2": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "fas fa-robot",
+            "text": "AI-Powered"
+          }
+        },
+        "trust_3": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "fas fa-heart",
+            "text": "Science-Backed"
+          }
+        },
+        "trust_4": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "fas fa-users",
+            "text": "2,000+ Members"
+          }
+        },
+        "trust_5": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "fas fa-shield-alt",
+            "text": "100% Free Plan"
+          }
+        }
+      },
+      "block_order": ["trust_1", "trust_2", "trust_3", "trust_4", "trust_5"]
+    },
+    "value_props": {
+      "type": "value-props",
+      "blocks": {
+        "prop_1": {
+          "type": "value_prop",
+          "settings": {
+            "icon": "fas fa-robot",
+            "title": "Truly Adaptive AI",
+            "description": "Our AI learns from your glucose patterns and energy levels to create workouts that work with your body, not against it."
+          }
+        },
+        "prop_2": {
+          "type": "value_prop",
+          "settings": {
+            "icon": "fas fa-hand-holding-usd",
+            "title": "10x More Affordable",
+            "description": "Get premium glucose-aware fitness coaching for the price of a few coffees, not a car payment. Just $14.99/month."
+          }
+        },
+        "prop_3": {
+          "type": "value_prop",
+          "settings": {
+            "icon": "fas fa-users",
+            "title": "A Community That Gets It",
+            "description": "Join thousands of people just like you. Share wins, ask questions, and get support from a community on the same journey."
+          }
+        }
+      },
+      "block_order": ["prop_1", "prop_2", "prop_3"]
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "settings": {
+        "section_title": "What Our Members Say",
+        "section_subtitle": "Real results from real people managing their glucose and energy"
+      },
+      "blocks": {
+        "testimonial_1": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "I've tried so many fitness apps, but RangeFit is the first one that actually understands my body. The AI recommendations are spot-on, and I haven't had an energy crash in weeks!",
+            "author": "Sarah M.",
+            "role": "Premium Member, PCOS Warrior"
+          }
+        },
+        "testimonial_2": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "As someone with pre-diabetes, finding the right workout timing was always a struggle. RangeFit takes the guesswork out. I finally feel in control of my energy levels.",
+            "author": "Jessica L.",
+            "role": "Premium Member"
+          }
+        },
+        "testimonial_3": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "The community is amazing! It's so helpful to connect with others who understand the glucose-fitness connection. Plus, the workouts are actually fun and doable!",
+            "author": "Maria G.",
+            "role": "Pro Member, 6 Months Strong"
+          }
+        }
+      },
+      "block_order": ["testimonial_1", "testimonial_2", "testimonial_3"]
+    },
+    "pricing": {
+      "type": "pricing",
+      "settings": {
+        "section_title": "Our Services",
+        "section_subtitle": ""
+      },
+      "blocks": {
+        "tier_1": {
+          "type": "pricing_tier",
+          "settings": {
+            "badge_text": "Start Here",
+            "icon": "fas fa-leaf",
+            "title": "Free 7-Day Plan",
+            "price": "Free",
+            "description": "Get a feel for glucose-friendly fitness with our 7-day introductory plan. No commitment, no app required.",
+            "features": "3 glucose-stabilizing workouts|Exercise timing guide for stable energy|Simple energy tracking sheet|Delivered instantly as a PDF|The perfect first step",
+            "button_text": "Get Started",
+            "button_link": "/products"
+          }
+        },
+        "tier_2": {
+          "type": "pricing_tier",
+          "settings": {
+            "badge_text": "Full Power",
+            "icon": "fas fa-robot",
+            "title": "RangeFit Premium",
+            "price": "$14.99",
+            "description": "Unlock the full power of our adaptive AI, personalized coaching, and supportive community.",
+            "features": "AI-Personalized Workouts|Full Workout Library Access|Progress & Glucose Pattern Tracking|Private Community Access (Discord)|Direct Support & Motivation",
+            "button_text": "Get Started",
+            "button_link": "/products"
+          }
+        },
+        "tier_3": {
+          "type": "pricing_tier",
+          "settings": {
+            "badge_text": "",
+            "icon": "fas fa-chart-line",
+            "title": "RangeFit Pro",
+            "price": "$24.99",
+            "description": "For those who want advanced analytics, live coaching, and priority support to accelerate their results.",
+            "features": "Everything in Premium, plus:|Advanced Analytics Dashboard|Monthly Live Group Coaching Calls|Priority Support Queue|Beta Access to New Features",
+            "button_text": "Get Started",
+            "button_link": "/products"
+          }
+        }
+      },
+      "block_order": ["tier_1", "tier_2", "tier_3"]
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "section_title": "Frequently Asked Questions",
+        "section_subtitle": "Everything you need to know about RangeFit"
+      },
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How does RangeFit work?",
+            "answer": "<p>RangeFit uses AI to personalize workouts based on your glucose patterns. Simply log your energy levels before and after workouts, and our AI learns what works best for your body.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I cancel anytime?",
+            "answer": "<p>Yes! You can cancel your subscription anytime with no fees or penalties. Your access will continue until the end of your billing period.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is RangeFit suitable for beginners?",
+            "answer": "<p>Absolutely! RangeFit is designed for all fitness levels. Our workouts include modifications for beginners, and the AI adapts to your current fitness level.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do I need special equipment?",
+            "answer": "<p>Most RangeFit workouts require no equipment. Some optional workouts use basic items like resistance bands or light dumbbells, but bodyweight alternatives are always provided.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How is this different from regular fitness apps?",
+            "answer": "<p>RangeFit is specifically designed for people with PCOS, pre-diabetes, and insulin resistance. We focus on glucose-friendly workouts that stabilize energy rather than spike and crash it.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What's included in the free 7-day plan?",
+            "answer": "<p>The free plan includes 3 glucose-stabilizing workouts, an exercise timing guide, and an energy tracking sheet delivered instantly as a PDF.</p>"
+          }
+        }
+      },
+      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6"]
+    },
+    "contact_form": {
+      "type": "contact-form",
+      "settings": {
+        "section_title": "Get Your Free 7-Day Plan",
+        "section_subtitle": "Start your glucose-friendly fitness journey today. No credit card required.",
+        "button_text": "Download Free Plan",
+        "success_title": "Check Your Email!",
+        "success_message": "Your free 7-day workout plan is on its way to your inbox. Check your email (and spam folder) in the next few minutes.",
+        "privacy_text": "By submitting this form, you agree to receive emails from RangeFit. We respect your privacy. Unsubscribe anytime.",
+        "show_features": true
+      },
+      "blocks": {
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "icon": "fas fa-file-pdf",
+            "text": "Instant PDF delivery"
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "icon": "fas fa-lock",
+            "text": "No credit card required"
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "icon": "fas fa-envelope-open-text",
+            "text": "7-day email support series"
+          }
+        }
+      },
+      "block_order": ["feature_1", "feature_2", "feature_3"]
+    }
+  },
+  "order": [
+    "hero",
+    "value_props",
+    "pricing",
+    "faq",
+    "contact_form",
+    "testimonials"
+  ]
+}

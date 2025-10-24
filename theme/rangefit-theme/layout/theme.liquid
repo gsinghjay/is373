@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {%- # RangeFit Theme Title and Meta Tags -%}
+    <title>{{ page_title }}{% if current_tags %} &ndash; {{ 'general.meta.tags' | t: tags: current_tags.join(', ') }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}</title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {%- # Social, title, etc. -%}
+    {% render 'meta-tags' %}
+
+    {%- # Favicon -%}
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ 'favicon-32x32.png' | asset_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ 'favicon-16x16.png' | asset_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ 'apple-touch-icon.png' | asset_url }}">
+
+    {%- # Preconnect to external resources -%}
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    {%- # RangeFit Fonts - Inter for body, Plus Jakarta Sans for headings -%}
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    {%- # Font Awesome for Icons -%}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    {%- # RangeFit Theme Styles -%}
+    {{ 'rangefit-theme.css' | asset_url | stylesheet_tag }}
+
+    {%- # Shopify Content for Header -%}
+    {{ content_for_header }}
+  </head>
+
+  <body class="template-{{ template.name }}">
+    {%- # Skip to Content Link for Accessibility -%}
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    {%- # Header -%}
+    {% sections 'header-group' %}
+
+    {%- # Main Content -%}
+    <main id="main-content" role="main">
+      {{ content_for_layout }}
+    </main>
+
+    {%- # Footer -%}
+    {% sections 'footer-group' %}
+
+    {%- # Scroll to Top Button -%}
+    <button class="scroll-top" aria-label="Scroll to top">
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    {%- # RangeFit Theme Scripts -%}
+    {{ 'rangefit-theme.js' | asset_url | script_tag }}
+  </body>
+</html>

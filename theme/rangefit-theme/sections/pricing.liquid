@@ -1,0 +1,160 @@
+{% comment %}
+  RangeFit Pricing/Services Section
+{% endcomment %}
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">{{ section.settings.section_title }}</h2>
+      {% if section.settings.section_subtitle != blank %}
+        <p class="section-subtitle">{{ section.settings.section_subtitle }}</p>
+      {% endif %}
+    </div>
+
+    <div class="services-grid grid grid-auto-fit-lg">
+      {% for block in section.blocks %}
+        <div class="service-card flex flex-col items-center" {{ block.shopify_attributes }}>
+          {% if block.settings.badge_text != blank %}
+            <span class="service-badge">{{ block.settings.badge_text }}</span>
+          {% endif %}
+
+          <div class="service-icon flex items-center justify-center">
+            <i class="{{ block.settings.icon }}"></i>
+          </div>
+
+          <h3 class="service-title">{{ block.settings.title }}</h3>
+          <p class="service-price">{{ block.settings.price }}</p>
+          <p class="service-description">{{ block.settings.description }}</p>
+
+          <ul class="service-features">
+            {% assign features = block.settings.features | split: '|' %}
+            {% for feature in features %}
+              <li class="flex items-start">{{ feature }}</li>
+            {% endfor %}
+          </ul>
+
+          <a href="{{ block.settings.button_link }}" class="btn btn-outline">{{ block.settings.button_text }}</a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Pricing",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Our Services"
+    },
+    {
+      "type": "text",
+      "id": "section_subtitle",
+      "label": "Section Subtitle"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "pricing_tier",
+      "name": "Pricing Tier",
+      "settings": [
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Badge Text (optional)",
+          "info": "Example: Start Here, Best Value"
+        },
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Font Awesome Icon Class",
+          "default": "fas fa-leaf"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Plan Title",
+          "default": "Free 7-Day Plan"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price",
+          "default": "Free"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "textarea",
+          "id": "features",
+          "label": "Features (separate with |)",
+          "default": "Feature 1|Feature 2|Feature 3",
+          "info": "Use | to separate each feature"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Get Started"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pricing",
+      "blocks": [
+        {
+          "type": "pricing_tier",
+          "settings": {
+            "badge_text": "Start Here",
+            "icon": "fas fa-leaf",
+            "title": "Free 7-Day Plan",
+            "price": "Free",
+            "description": "Get a feel for glucose-friendly fitness with our 7-day introductory plan.",
+            "features": "3 glucose-stabilizing workouts|Exercise timing guide for stable energy|Simple energy tracking sheet|Delivered instantly as a PDF|The perfect first step",
+            "button_text": "Get Started",
+            "button_link": "#contact"
+          }
+        },
+        {
+          "type": "pricing_tier",
+          "settings": {
+            "badge_text": "Full Power",
+            "icon": "fas fa-robot",
+            "title": "RangeFit Premium",
+            "price": "$14.99",
+            "description": "Unlock the full power of our adaptive AI, personalized coaching, and supportive community.",
+            "features": "AI-Personalized Workouts|Full Workout Library Access|Progress & Glucose Pattern Tracking|Private Community Access (Discord)|Direct Support & Motivation",
+            "button_text": "Get Started",
+            "button_link": "#contact"
+          }
+        },
+        {
+          "type": "pricing_tier",
+          "settings": {
+            "icon": "fas fa-chart-line",
+            "title": "RangeFit Pro",
+            "price": "$24.99",
+            "description": "For those who want advanced analytics, live coaching, and priority support.",
+            "features": "Everything in Premium, plus:|Advanced Analytics Dashboard|Monthly Live Group Coaching Calls|Priority Support Queue|Beta Access to New Features",
+            "button_text": "Get Started",
+            "button_link": "#contact"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
