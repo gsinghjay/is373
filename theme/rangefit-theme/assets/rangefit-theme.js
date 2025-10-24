@@ -1,5 +1,5 @@
 /* ===================================
-   Legs on the Ground - Interactive Features
+   RangeFit Theme - Interactive Features
    =================================== */
 
 // Wait for DOM to be fully loaded
@@ -148,16 +148,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const whatsappButtons = document.querySelectorAll('[href*="wa.me"], [href*="whatsapp"]');
     whatsappButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Track WhatsApp click (add your analytics code here)
-            console.log('WhatsApp button clicked');
-            
-            // You can add Google Analytics event tracking:
-            // if (typeof gtag !== 'undefined') {
-            //     gtag('event', 'whatsapp_click', {
-            //         'event_category': 'engagement',
-            //         'event_label': 'WhatsApp Contact'
-            //     });
-            // }
+            // Track WhatsApp click with analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'whatsapp_click', {
+                    'event_category': 'engagement',
+                    'event_label': 'WhatsApp Contact'
+                });
+            }
         });
     });
     
@@ -167,9 +164,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const phoneLinks = document.querySelectorAll('[href^="tel:"]');
     phoneLinks.forEach(link => {
         link.addEventListener('click', function() {
-            console.log('Phone link clicked');
-            
-            // Add analytics tracking here if needed
+            // Track phone link clicks
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'phone_click', {
+                    'event_category': 'engagement',
+                    'event_label': 'Phone Contact'
+                });
+            }
         });
     });
     
@@ -342,7 +343,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===================================
     window.addEventListener('beforeprint', function() {
         // Expand any collapsed sections before printing
-        console.log('Preparing page for printing...');
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const answer = item.querySelector('.faq-answer');
+            if (answer) {
+                answer.style.maxHeight = 'none';
+            }
+        });
     });
     
     // ===================================
@@ -362,61 +368,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // ===================================
-    // FAQ Accordion - Fortune 100 Professional Implementation
+    // FAQ Accordion
     // ===================================
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    
-    if (faqQuestions.length > 0) {
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const faqItem = this.closest('.faq-item');
-                const faqAnswer = faqItem.querySelector('.faq-answer');
-                const isActive = faqItem.classList.contains('active');
-                const wasExpanded = this.getAttribute('aria-expanded') === 'true';
-                
-                // Close all FAQ items
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    item.classList.remove('active');
-                    const btn = item.querySelector('.faq-question');
-                    const answer = item.querySelector('.faq-answer');
-                    btn.setAttribute('aria-expanded', 'false');
-                    if (answer) {
-                        answer.style.maxHeight = '0';
-                    }
-                });
-                
-                // Toggle current item (if it wasn't already open)
-                if (!wasExpanded) {
-                    faqItem.classList.add('active');
-                    this.setAttribute('aria-expanded', 'true');
-                    
-                    // Set max-height to the scroll height for smooth animation
-                    if (faqAnswer) {
-                        faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
-                    }
-                }
-            });
-            
-            // Keyboard accessibility
-            question.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    this.click();
-                }
-            });
-        });
-        
-        console.log(`FAQ Accordion initialized: ${faqQuestions.length} questions`);
-    }
+    // FAQ accordion functionality is handled inline within sections/faq.liquid
+    // This ensures proper isolation and prevents conflicts with section editor
     
     // ===================================
     // Service Page Price Calculator (if on services page)
     // ===================================
     // This can be expanded for a pricing calculator
-    
-    console.log('Legs on the Ground website loaded successfully!');
 });
 
 // ===================================

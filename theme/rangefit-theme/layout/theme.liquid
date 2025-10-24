@@ -14,10 +14,9 @@
     {%- # Social, title, etc. -%}
     {% render 'meta-tags' %}
 
-    {%- # Favicon -%}
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ 'favicon-32x32.png' | asset_url }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ 'favicon-16x16.png' | asset_url }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ 'apple-touch-icon.png' | asset_url }}">
+    {%- # Favicon - TODO: Replace with proper PNG favicons -%}
+    <link rel="icon" type="image/svg+xml" href="{{ 'favicon.svg' | asset_url }}">
+    <link rel="icon" type="image/svg+xml" sizes="any" href="{{ 'favicon.svg' | asset_url }}">
 
     {%- # Preconnect to external resources -%}
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -58,6 +57,6 @@
     </button>
 
     {%- # RangeFit Theme Scripts -%}
-    {{ 'rangefit-theme.js' | asset_url | script_tag }}
+    <script src="{{ 'rangefit-theme.js' | asset_url }}" defer></script>
   </body>
 </html>

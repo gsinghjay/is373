@@ -58,12 +58,13 @@
       question.addEventListener('click', function() {
         const isOpen = this.getAttribute('aria-expanded') === 'true';
         const answer = this.nextElementSibling;
+        const content = answer.querySelector('.faq-answer-content');
 
         // Close all other FAQs (optional - remove to allow multiple open)
         faqQuestions.forEach(function(q) {
           if (q !== question) {
             q.setAttribute('aria-expanded', 'false');
-            q.nextElementSibling.style.maxHeight = null;
+            q.nextElementSibling.style.maxHeight = '0';
             q.querySelector('.faq-icon i').classList.remove('fa-chevron-up');
             q.querySelector('.faq-icon i').classList.add('fa-chevron-down');
           }
@@ -72,12 +73,13 @@
         // Toggle current FAQ
         if (isOpen) {
           this.setAttribute('aria-expanded', 'false');
-          answer.style.maxHeight = null;
+          answer.style.maxHeight = '0';
           this.querySelector('.faq-icon i').classList.remove('fa-chevron-up');
           this.querySelector('.faq-icon i').classList.add('fa-chevron-down');
         } else {
           this.setAttribute('aria-expanded', 'true');
-          answer.style.maxHeight = answer.scrollHeight + 'px';
+          // Get the height of the content div and add some padding
+          answer.style.maxHeight = (content.scrollHeight + 20) + 'px';
           this.querySelector('.faq-icon i').classList.remove('fa-chevron-down');
           this.querySelector('.faq-icon i').classList.add('fa-chevron-up');
         }
