@@ -332,37 +332,6 @@ shopify version
 
 ---
 
-## 👥 Development
-
-### BMAD™ Framework
-
-This project uses the **BMAD™ (Better Management via Agent Development)** framework for AI-assisted development.
-
-**Agents:**
-- **💻 James (Dev Agent):** Code implementation, debugging, testing
-- **🏗️ Winston (Architect):** System design, technical decisions
-- **📋 PM Agent:** Story breakdown, task management
-- **🧪 QA Agent:** Quality assurance, validation
-
-**Commands:**
-```bash
-# Activate dev agent
-/BMad:agents:dev
-
-# View available commands
-*help
-
-# Implement a story
-*develop-story
-
-# Run tests
-*run-tests
-```
-
-See `.bmad-core/` for configuration.
-
----
-
 ## 📄 License
 
 **Proprietary** - RangeFit © 2025
