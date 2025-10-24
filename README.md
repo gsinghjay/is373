@@ -1,727 +1,391 @@
-# Legs on the Ground - Property Concierge Services
+# RangeFit - Shopify Fitness Subscription Platform
 
-Professional bilingual property concierge services for mainland owners in Puerto Rico.
+**Glucose-aware fitness platform built on Shopify with AI-powered workout personalization**
 
-## 🚀 Quick Start
-
-```bash
-# Development (easiest)
-make dev          # Build + serve with live preview
-
-# Or using Python directly
-python site.py dev
-
-# Or manually
-python site.py build
-python site.py serve
-```
-
-Visit http://localhost:8000 to see your site!
-
-## 📦 Installation
-
-```bash
-# Install dependencies
-make install
-# or
-pip install -r requirements.txt
-
-# Setup git hooks (optional)
-python site.py init-hooks
-```
-
-## 🎯 Common Commands
-
-### Using Make (Recommended)
-```bash
-make build        # Build the site
-make serve        # Start server
-make dev          # Build + serve (most common)
-make validate     # Check for errors
-make cleanup      # Keep project tidy
-make status       # Show project info
-make help         # See all commands
-```
-
-### Using Python CLI
-```bash
-python site.py build      # Build the site
-python site.py serve      # Start development server
-python site.py dev        # Development mode
-python site.py validate   # Validate content
-python site.py backup     # Create backup
-python site.py analyze    # AI visual analysis
-python site.py optimize   # Optimize images
-python site.py cleanup    # Clean up project
-python site.py status     # Show status
-```
-
-## 📁 Project Structure
-
-```
-├── site.py              # 🎯 Unified CLI (use this!)
-├── site.config.yaml     # ⚙️  Configuration
-├── Makefile             # 🔧 Convenient shortcuts
-├── build.py             # 🏗️  Core build system
-├── validator.py         # ✅ Quality checks
-├── cleanup_project.py   # 🧹 Organization
-├── templates/           # 📄 Jinja2 templates
-├── content/             # 📝 YAML content
-├── static/              # 🎨 CSS, JS, images
-├── docs/                # 📦 Built site (auto-generated)
-├── tools/               # 🛠️  AI development tools
-├── reports/             # 📊 Analysis reports
-└── backups/             # 💾 Auto-backups
-```
-
-## 🔧 Configuration
-
-Edit `site.config.yaml` to customize:
-- Build settings
-- Validation rules
-- Backup preferences
-- Tool configurations
-- Development server options
-
-## 🎨 Development Workflow
-
-```bash
-# 1. Make changes to templates/content/static
-# 2. Build and preview
-make dev
-
-# 3. Validate before committing
-make validate
-
-# 4. Keep project clean
-make cleanup
-
-# 5. Check status
-make status
-```
-
-## 🛠️ AI Tools
-
-All tools are in the `tools/` directory:
-
-```bash
-# Visual analysis
-python tools/visual_inspector.py --full --analyze
-
-# Image optimization
-python tools/image_optimizer.py
-
-# Logo generation
-python tools/logo_generator.py
-
-# See all tools
-ls tools/
-```
-
-Or use the CLI:
-```bash
-python site.py analyze    # Visual analysis
-python site.py optimize   # Image optimization
-```
-
-## ✅ Quality Assurance
-
-```bash
-# Validate everything
-make validate
-
-# Run visual analysis
-make analyze
-
-# Optimize images
-make optimize
-```
-
-## 💾 Backups
-
-Automatic backups are created before each build (configurable in `site.config.yaml`):
-
-```bash
-# Manual backup
-make backup
-# or
-python site.py backup
-```
-
-Backups are stored in `backups/` directory (keeps last 5 by default).
-
-## 🧹 Keeping It Clean
-
-```bash
-# Regular cleanup
-make cleanup
-
-# Aggressive cleanup (removes more old files)
-python site.py cleanup --aggressive
-
-# Clean build artifacts
-make clean
-```
-
-## 📊 Project Status
-
-```bash
-make status
-# Shows:
-# - File counts
-# - Last build info
-# - Backup status
-# - Configuration
-```
-
-## 🔗 Git Integration
-
-```bash
-# Setup automatic validation before commits
-python site.py init-hooks
-
-# This will:
-# - Run validation before each commit
-# - Run cleanup before each commit
-# - Prevent commits if validation fails
-```
-
-## 📖 Documentation
-
-- **This File:** Quick start and commands
-- **Launch Checklist:** `LAUNCH-CHECKLIST.md`
-- **Tool Documentation:** `tools/README.md`
-- **Reports Index:** `reports/INDEX.md`
-- **Configuration:** `site.config.yaml`
-
-## 🚢 Deployment
-
-```bash
-# Validate and build
-make deploy
-
-# Push to GitHub (auto-deploys via Pages)
-git add .
-git commit -m "Update site"
-git push
-```
-
-## 🐛 Troubleshooting
-
-**Build fails?**
-```bash
-python site.py validate  # Check for errors
-python site.py clean     # Clean and rebuild
-```
-
-**Project messy?**
-```bash
-make cleanup             # Organize files
-```
-
-**Need to rollback?**
-```bash
-ls backups/              # Find backup
-# Restore manually from backups/
-```
-
-## 📈 Performance
-
-Build metrics are automatically tracked in `build_metrics.log`:
-- Build time
-- File sizes
-- Timestamps
-
-## 🎯 Pro Tips
-
-1. **Use `make` for common tasks** - Easier to remember
-2. **Run `make cleanup` after analysis** - Keeps project tidy
-3. **Use `make dev` for development** - Build + serve in one command
-4. **Check `make status` often** - Know your project state
-5. **Commit often** - Git hooks ensure quality
-
-## 📞 Support
-
-- **Live Site:** https://kaw393939.github.io/legsontheground.com/
-- **Build System:** Python 3.12 + Jinja2
-- **Deployment:** GitHub Pages (automatic)
+[![Shopify](https://img.shields.io/badge/Shopify-Basic-96bf48?logo=shopify)](https://rangefit-dev.myshopify.com)
+[![Status](https://img.shields.io/badge/Status-Epic%201%20Complete-success)](https://github.com)
+[![Theme](https://img.shields.io/badge/Theme-Skeleton-blue)](https://github.com/Shopify/skeleton-theme)
 
 ---
 
-**Made with ❤️ using AI-powered development tools**
+## 🎯 Project Overview
 
-## 🎯 Overview
-
-This is a modern, maintainable static site built with:
-- **Python 3.12** - Build system
-- **Jinja2** - Template engine
-- **Markdown + YAML** - Content management
-- **No CMS required** - Git-based workflow
+RangeFit is a SaaS fitness platform designed for people managing blood sugar through exercise. Built entirely on Shopify infrastructure, it combines e-commerce, content delivery, and member management without custom servers.
 
 **Key Features:**
-- ✅ Content managed in YAML (easy for non-technical users)
-- ✅ Template-based HTML generation (DRY principle)
-- ✅ Single-command build process
-- ✅ AI-powered image analysis (OpenAI Vision API)
-- ✅ Automated quality validation (HTML/CSS/Accessibility)
-- ✅ GitHub Pages deployment ready
-- 🚧 CI/CD with GitHub Actions (Phase 4)
+- 💪 21+ glucose-friendly workout library (member-only access)
+- 🔐 Trial subscriptions ($4.99/7 days → $14.99/month)
+- 📧 Automated email nurture sequences (ConvertKit)
+- 💬 Private Discord community
+- 📊 Energy level tracking (Google Forms → Sheets)
+- 🎨 Custom design system (3,456 lines CSS migrated)
+
+**Architecture:** Shopify-centric SaaS integration platform
+**Budget:** <$60/month operational costs
+**Timeline:** 5 weeks to MVP
+
+---
+
+## 📦 Current Status
+
+### ✅ Epic 1: Foundation & Landing Page (COMPLETED)
+
+**Theme Deployed:** `rangefit-theme` (ID: 182405005605)
+**Store:** [rangefit-dev.myshopify.com](https://rangefit-dev.myshopify.com/?preview_theme_id=182405005605)
+**Location:** `/theme/rangefit-theme/`
+
+**Implemented Sections:**
+- ✅ Header with navigation & CTA
+- ✅ Hero section with trust bar
+- ✅ Value proposition cards (3 blocks)
+- ✅ Pricing tiers (Free/Premium/Pro)
+- ✅ Footer with links & contact info
+- ✅ FAQ accordion
+- ✅ Custom CSS (96KB) & JavaScript (17KB)
+
+### 🔜 Upcoming Epics
+
+- **Epic 2:** Email Nurture & Free Plan Delivery (Week 3)
+- **Epic 3:** Trial Signup & Subscription Commerce (Week 4)
+- **Epic 4:** Member Experience & Workout Library (Week 5)
+
+---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.12+
-- Git
 
-### Setup & Build
+- **Node.js** 18+ ([Download](https://nodejs.org))
+- **Shopify CLI** 3.86+
+- **Git**
+
+### Installation
 
 ```bash
-# Clone the repository
-git clone <your-repo-url>
-cd legsontheground.com
+# Clone repository
+git clone https://github.com/gsinghjay/is373.git
+cd is373/theme/rangefit-theme
 
-# Build the site (creates venv automatically)
-./build.sh
+# Install Shopify CLI
+npm install -g @shopify/cli @shopify/theme
 
-# Preview locally
-cd docs && python3 -m http.server 8000
-# Open http://localhost:8000
+# Authenticate with Shopify
+shopify auth login
+# Use: js426@njit.edu
+# Store: rangefit-dev.myshopify.com
 ```
+
+### Development Commands
+
+```bash
+# Start development server (hot reload)
+shopify theme dev --store=rangefit-dev.myshopify.com
+
+# Preview at: http://127.0.0.1:9292
+
+# Push changes to development theme
+shopify theme push --store=rangefit-dev.myshopify.com --theme=182405005605
+
+# Push CSS only (faster iteration)
+shopify theme push --only="assets/rangefit-theme.css"
+
+# Run theme validation
+shopify theme check
+
+# List all themes
+shopify theme list
+```
+
+### Quick Links
+
+- **🎨 Theme Editor:** [Customize Theme](https://rangefit-dev.myshopify.com/admin/themes/182405005605/editor)
+- **👁️ Preview:** [Preview Store](https://rangefit-dev.myshopify.com/?preview_theme_id=182405005605)
+- **⚙️ Admin:** [Shopify Admin](https://rangefit-dev.myshopify.com/admin)
+
+---
 
 ## 📁 Project Structure
 
 ```
-legsontheground.com/
-├── content/                 # Content (edit here!)
-│   ├── config.yaml         # Site-wide configuration
-│   ├── pages/              # Page content (Markdown)
-│   │   └── home.md
-│   └── data/               # Structured data (YAML)
-│       ├── services.yaml
-│       ├── testimonials.yaml
-│       ├── value-props.yaml
-│       ├── why-choose.yaml
-│       └── navigation.yaml
+is373/
+├── docs/                          # Project documentation
+│   ├── architecture.md            # ✅ Complete technical architecture
+│   ├── prd.md                     # Product requirements
+│   ├── brief.md                   # Project brief
+│   └── prd/                       # Sharded PRD by epic
 │
-├── templates/              # Jinja2 templates (HTML structure)
-│   ├── base.html          # Master template
-│   ├── home.html          # Homepage layout
-│   ├── components/        # Reusable components
-│   │   ├── header.html
-│   │   ├── footer.html
-│   │   └── top-bar.html
-│   └── sections/          # Page sections
-│       ├── hero.html
-│       ├── services.html
-│       ├── testimonials.html
-│       └── ...
+├── theme/rangefit-theme/          # 🎯 Shopify theme (active development)
+│   ├── layout/
+│   │   └── theme.liquid           # Master layout
+│   ├── sections/
+│   │   ├── header.liquid          # ✅ Custom header
+│   │   ├── hero.liquid            # ✅ Hero section
+│   │   ├── value-props.liquid     # ✅ Value props
+│   │   ├── pricing.liquid         # ✅ Pricing tiers
+│   │   ├── footer.liquid          # ✅ Footer
+│   │   └── faq.liquid             # ✅ FAQ accordion
+│   ├── templates/
+│   │   ├── index.json             # Homepage template
+│   │   ├── article.liquid         # 🔜 Workout blog posts
+│   │   └── page.dashboard.liquid  # 🔜 Member dashboard
+│   ├── assets/
+│   │   ├── rangefit-theme.css     # 96KB design system
+│   │   └── rangefit-theme.js      # 17KB interactions
+│   ├── SETUP-DOCUMENTATION.md     # Complete setup guide
+│   ├── QUICK-START.md             # Quick reference
+│   └── PUBLISH-TO-PRODUCTION.md   # Deployment guide
 │
-├── static/                 # Static assets (images, CSS, JS)
-│   ├── css/
-│   ├── js/
-│   └── images/
+├── docs_site/                     # Static site (reference)
+│   ├── index.html                 # Original landing page
+│   ├── styles.css                 # Source CSS (migrated)
+│   └── main.js                    # Source JS (migrated)
 │
-├── docs/                   # Generated output (GitHub Pages)
-│   └── index.html         # Built HTML
+├── documents/                     # Supporting materials
+│   ├── customer-discovery.pdf
+│   ├── rangefit-kpi-tracker.csv
+│   └── *.md                       # Marketing & content docs
 │
-├── build.py               # Build script
-├── build.sh               # Convenience wrapper
-└── requirements.txt       # Python dependencies
+└── .bmad-core/                    # BMAD™ development framework
+    ├── core-config.yaml           # Project configuration
+    └── tasks/                     # Development tasks
 ```
 
-## 🛠️ Development Workflow
-
-### 1. Edit Content
-
-**For Non-Technical Users:** See [CONTENT-GUIDE.md](CONTENT-GUIDE.md)
-
-**For Developers:**
-- Edit `content/pages/*.md` for page content
-- Edit `content/data/*.yaml` for structured data
-- Edit `content/config.yaml` for site-wide settings
-
-### 2. Build Site
-
-```bash
-./build.sh          # Full build
-./build.sh --validate  # Build with validation (coming soon)
-```
-
-Or use Python directly:
-```bash
-./venv/bin/python build.py
-```
-
-### 3. Test Locally
-
-```bash
-cd docs
-python3 -m http.server 8000
-```
-
-### 4. Deploy
-
-Push to GitHub and GitHub Actions will auto-deploy (Phase 4).
-
-For manual deployment:
-```bash
-git add .
-git commit -m "Update content"
-git push origin master
-```
-
-## 📝 Content Management
-
-### YAML Files
-
-All data is in `content/data/*.yaml`:
-
-```yaml
-# services.yaml
-services:
-  - id: property-visits
-    title: "Property Check-Ins"
-    price: "$100"
-    description: "Detailed property inspections"
-    features:
-      - "Photo documentation"
-      - "Issue alerts"
-```
-
-### Markdown Pages
-
-Pages use YAML frontmatter + Markdown:
-
-```markdown
----
-title: "Page Title"
-layout: "home"
-hero:
-  title: "Hero Title"
-  subtitle: "Hero Subtitle"
 ---
 
-# Page Content
+## 🛠️ Technology Stack
 
-Your markdown content here...
-```
+| Category | Technology | Purpose |
+|----------|-----------|---------|
+| **Platform** | Shopify Basic ($39/mo) | E-commerce, subscriptions, hosting |
+| **Theme Base** | Shopify Skeleton | Minimal CSS conflicts |
+| **Templating** | Liquid | Shopify theme language |
+| **Styling** | Custom CSS (96KB) | Ported "Legs on the Ground v2.0" design system |
+| **JavaScript** | Vanilla ES6+ | Minimal framework (accordion, mobile menu) |
+| **Email** | ConvertKit | Automation, nurture sequences |
+| **Orchestration** | Zapier Starter ($20/mo) | Shopify ↔ ConvertKit ↔ Sheets |
+| **Community** | Discord | Member support & engagement |
+| **Analytics** | Google Sheets | Funnel tracking, energy logs |
+| **Payments** | Shopify Payments | PCI-compliant subscriptions |
+| **Version Control** | Git + GitHub | Source control |
+| **CLI** | Shopify CLI 3.86+ | Theme deployment |
 
-## 🎨 Template System
+---
 
-### Template Hierarchy
+## 📚 Documentation
 
-```
-base.html                   # Master template
-└── home.html              # Page layout
-    ├── sections/hero.html
-    ├── sections/services.html
-    └── sections/cta.html
-```
+### Quick Reference
+- **🚀 [Quick Start Guide](theme/rangefit-theme/QUICK-START.md)** - Daily development commands
+- **📖 [Setup Documentation](theme/rangefit-theme/SETUP-DOCUMENTATION.md)** - Complete technical setup
+- **🚢 [Deployment Guide](theme/rangefit-theme/PUBLISH-TO-PRODUCTION.md)** - Safe production publishing
 
-### Available Variables
+### Architecture & Planning
+- **🏗️ [Technical Architecture](docs/architecture.md)** - System design, integrations, workflows
+- **📋 [Product Requirements](docs/prd.md)** - Features, user stories, acceptance criteria
+- **📝 [Project Brief](docs/brief.md)** - Business context, goals, constraints
 
-In templates, you have access to:
-- `{{ site.* }}` - Site configuration (phone, email, etc.)
-- `{{ page.* }}` - Current page frontmatter
-- `{{ services }}` - Services data
-- `{{ testimonials }}` - Testimonials data
-- `{{ navigation }}` - Menu structure
-- `{{ features }}` - Feature flags
-- `{{ current_year }}` - Current year (for copyright)
+### Epics & Stories
+- **[Epic 1: Foundation & Landing Page](docs/prd/epic-1-foundation-landing-page-lead-capture.md)** ✅ Completed
+- **[Epic 2: Email Nurture & Free Plan](docs/prd/epic-2-email-nurture-free-plan-delivery-system.md)** 🔜 Next
+- **[Epic 3: Trial Signup & Subscriptions](docs/prd/epic-3-trial-signup-subscription-commerce.md)**
+- **[Epic 4: Member Experience & Workouts](docs/prd/epic-4-member-experience-workout-library-community-integration.md)**
 
-## 🔧 Build System
+---
 
-### build.py
+## 🚢 Deployment
 
-The core build script:
-
-```python
-from build import SiteBuilder
-
-builder = SiteBuilder()
-builder.build()
-```
-
-**What it does:**
-1. Loads all YAML data from `content/data/`
-2. Parses Markdown pages with frontmatter
-3. Renders Jinja2 templates with data
-4. Copies static assets (CSS, JS, images)
-5. Outputs to `docs/` directory
-
-### Build Options
+### Safe Deployment Process
 
 ```bash
-# Clean build
-./venv/bin/python build.py
+# 1. Push as unpublished theme (safe preview)
+cd theme/rangefit-theme
+shopify theme push --store=rangefit-dev.myshopify.com --unpublished
 
-# Keep existing files
-./venv/bin/python build.py --no-clean
+# 2. Test preview URL provided in output
 
-# With validation
-./venv/bin/python build.py --validate
+# 3. Publish via Shopify Admin when ready
+# Go to: Admin → Themes → Find new theme → Click "Publish"
 ```
 
-## 🧪 Testing & Validation
+### Pre-Deployment Checklist
 
-### Build with Validation
+**Required:**
+- [ ] Hero background image uploaded
+- [ ] Logo uploaded to header
+- [ ] Navigation menu created
+- [ ] Footer menu created
+- [ ] Contact information updated
+- [ ] All section text reviewed
+- [ ] Pricing information correct
+
+**Testing:**
+- [ ] Desktop browser tested
+- [ ] Mobile browser tested
+- [ ] CSS loads correctly
+- [ ] JavaScript works (menu, accordion)
+- [ ] No console errors (F12)
+- [ ] Images optimized (<500KB)
+
+See [PUBLISH-TO-PRODUCTION.md](theme/rangefit-theme/PUBLISH-TO-PRODUCTION.md) for complete checklist.
+
+---
+
+## 🔧 Configuration
+
+### Environment Setup
+
 ```bash
-# Full build with quality gates
-python build.py --validate
+# Shopify CLI config (auto-generated)
+# Located in: theme/rangefit-theme/.shopify/
 
-# Standalone validation
-python validator.py
-
-# Save detailed report
-python validator.py --save-report report.json
+# Important: Add to .gitignore
+.shopify/
+.env
+.env.local
 ```
 
-### What Gets Validated ✓
-- **HTML**: Structure, meta tags, accessibility, SEO
-- **CSS**: Syntax, best practices, performance
-- **Images**: Alt text, dimensions
-- **Links**: Valid hrefs, security attributes
-- **Headings**: Proper hierarchy
+### Theme Settings
 
-See [QUALITY-GATES.md](QUALITY-GATES.md) for details.
+**Edit via Theme Editor:**
+- Logo & branding colors
+- Section visibility toggles
+- Content blocks (testimonials, FAQs)
+- Menu navigation
 
-## 🚀 Deployment
+**Or edit JSON directly:**
+- `config/settings_data.json` - Active theme settings
+- `config/settings_schema.json` - Customization options
 
-### GitHub Pages (Recommended)
-
-1. Push to GitHub
-2. Enable Pages in repo settings
-3. Set source to `/docs` folder on `master` branch
-4. Site auto-updates on push
-
-### Manual Deploy
-
-Build locally and upload `docs/` folder to any static host.
-
-## 🤖 AI Features (Phase 2) ✨
-
-**NOW AVAILABLE!**
-- ✅ AI image analysis (OpenAI Vision API)
-- ✅ Auto-generated alt text
-- ✅ Detailed image descriptions
-- ✅ Accessibility recommendations
-- ✅ SEO-optimized metadata
-
-See [AI-IMAGE-MANAGER.md](AI-IMAGE-MANAGER.md) for setup and usage.
-
-## 📦 Dependencies
-
-```txt
-jinja2>=3.1.0       # Template engine
-pyyaml>=6.0.0       # YAML parser
-markdown>=3.5.0     # Markdown processor
-```
-
-Install:
-```bash
-pip install -r requirements.txt
-```
+---
 
 ## 🐛 Troubleshooting
 
-### Build Fails
+### Common Issues
 
-**Check YAML syntax:**
+**CSS not loading (404 error)?**
 ```bash
-./venv/bin/python -c "import yaml; yaml.safe_load(open('content/config.yaml'))"
+# Check for syntax errors
+shopify theme check
+
+# Force push CSS
+shopify theme push --force --only="assets/rangefit-theme.css"
 ```
 
-**Check Python version:**
+**Development server won't start?**
 ```bash
-python3 --version  # Should be 3.12+
+# Re-authenticate
+shopify auth logout
+shopify auth login
+
+# Check Shopify CLI version
+shopify version
+# Should be 3.86+
 ```
 
-### Missing Content
-
-If sections are empty, check:
-1. YAML file structure matches template expectations
-2. Data keys are correct (use underscores, not hyphens)
-3. Build script loaded the data (check console output)
-
-### JavaScript Errors
-
-Check browser console. Common issues:
-- Missing element IDs (add to templates)
-- Font Awesome not loading (check CDN)
-
-## 📚 Additional Documentation
-
-- [CONTENT-GUIDE.md](CONTENT-GUIDE.md) - For content editors
-- [LAUNCH-CHECKLIST.md](LAUNCH-CHECKLIST.md) - Pre-launch checklist
-- [docs/](docs/) - Technical documentation
-
-## 🗺️ Roadmap
-
-- [x] Phase 1: Foundation (Content + Templates)
-- [x] Phase 2: AI Image Manager (OpenAI Vision API)
-- [x] Phase 3: Quality Gates (HTML/CSS/Accessibility)
-- [x] Phase 4: GitHub Actions CI/CD ✨ NEW!
-- [ ] Phase 5: Final Testing & Launch
-
-## 📄 License
-
-Proprietary - Legs on the Ground © 2025
-
-## 👥 Contributing
-
-1. Create feature branch
-2. Make changes
-3. Test locally
-4. Submit pull request
-
-## 🆘 Support
-
-For technical issues, contact your developer or file an issue in the repository.
-
-## Project Structure
-
+**Theme upload warnings?**
 ```
-legsontheground.com/
-├── src/                          # Website files
-│   ├── index.html               # Main website (SEO optimized)
-│   ├── styles.css               # Professional styling
-│   ├── robots.txt               # Search engine crawler rules
-│   └── sitemap.xml              # Site structure for search engines
-│
-└── docs/                         # Essential documentation
-    ├── brand-basics.md          # Core brand identity & messaging
-    ├── design-system.md         # Colors, typography, spacing
-    ├── content-guide.md         # How to write & communicate
-    ├── business-reality.md      # Services, pricing, goals
-    └── README.md                # Documentation guide
+# Temporary file warnings are normal during dev server
+# Ignore: *.tmp.* file warnings
+# Use `shopify theme push` for clean uploads
 ```
 
-## SEO Optimization Features
+### Getting Help
 
-### ✅ Traditional SEO:
-- Comprehensive meta tags (title, description, keywords)
-- Open Graph tags for social sharing
-- Twitter Card meta tags
-- Structured data (Schema.org) for Local Business
-- Structured data for Services and Pricing
-- Structured data for FAQs
-- Semantic HTML5 with proper ARIA labels
-- Geographic metadata for Puerto Rico/San Juan
-- XML sitemap
-- Robots.txt with AI agent rules
-- Canonical URLs
-- Mobile-responsive design
-
-### ✅ AI Agent Optimization:
-- Detailed service descriptions with pricing
-- Natural language Q&A format
-- Structured data that AI can parse
-- Clear business context and location
-- Bilingual service emphasis
-- FAQ schema for common questions
-- Specific geographic service areas
-- Contact information in multiple formats
-
-### ✅ Key SEO Keywords Targeted:
-- Puerto Rico property management
-- Bilingual property services Puerto Rico
-- San Juan property concierge
-- Mainland property owners Puerto Rico
-- Act 60 property services
-- Puerto Rico translation services
-- Property check-ins Puerto Rico
-- Absentee property management
-
-## Quick Reference for Nilsa
-
-### Day-to-Day Questions:
-1. **What to charge?** → `docs/business-reality.md`
-2. **How to talk to customers?** → `docs/content-guide.md`
-3. **What makes us different?** → `docs/brand-basics.md`
-4. **Design/color questions?** → `docs/design-system.md`
-
-### Website Updates:
-1. Edit: `src/index.html`
-2. Check tone: `docs/content-guide.md`
-3. Check colors: `docs/design-system.md`
-
-## Next Steps Before Launch
-
-### Setup (Do First):
-- [ ] Get business email (contact@legsontheground.com)
-- [ ] Set up form handler (Formspree - free tier)
-- [ ] Get business phone (Google Voice - free)
-- [ ] Purchase domain name
-- [ ] Get liability insurance
-- [ ] Update robots.txt with actual domain
-- [ ] Update sitemap.xml with actual URLs
-- [ ] Update Formspree form ID in index.html
-- [ ] Create og-image.jpg (1200x630px) for social sharing
-- [ ] Create twitter-image.jpg (1200x600px) for Twitter
-
-### SEO & Discovery:
-- [ ] Submit sitemap to Google Search Console
-- [ ] Submit sitemap to Bing Webmaster Tools
-- [ ] Set up Google Business Profile
-- [ ] Create Facebook Business Page
-- [ ] Set up LinkedIn Company Page
-- [ ] Join Facebook groups for Puerto Rico property owners
-- [ ] Test with WAVE accessibility tool
-- [ ] Test with axe DevTools
-- [ ] Validate HTML with W3C Validator
-- [ ] Test with Lighthouse (aim for 90+ scores)
-
-### Launch:
-- [ ] Deploy website with proper domain
-- [ ] Test all structured data with Google Rich Results Test
-- [ ] Verify mobile-friendliness with Google Mobile-Friendly Test
-- [ ] Test with multiple screen readers
-- [ ] Test keyboard navigation
-- [ ] Test with browser zoom up to 200%
-- [ ] Set up Google Analytics
-- [ ] Monitor search console for indexing
-- [ ] Test form submissions
-- [ ] Verify all links work
-
-## Accessibility Testing Checklist
-
-### Keyboard Navigation:
-- [ ] All interactive elements accessible via Tab key
-- [ ] Logical tab order throughout page
-- [ ] Skip-to-content link functional
-- [ ] Escape key closes mobile menu
-- [ ] Enter/Space activates buttons and links
-
-### Screen Reader Testing:
-- [ ] All images have alt text
-- [ ] Form labels properly associated
-- [ ] ARIA labels present where needed
-- [ ] Heading hierarchy makes sense
-- [ ] Lists properly marked up
-
-### Visual Testing:
-- [ ] Text readable at 200% zoom
-- [ ] Color contrast meets standards
-- [ ] Focus indicators visible
-- [ ] Works in high contrast mode
-- [ ] No content only conveyed by color
-
-## Important Reminders
-
-**Safety First:**
-- Never use personal name publicly
-- Business contact info only
-- Professional boundaries always
-
-**Keep It Simple:**
-- 5 core services only
-- Clear, honest pricing
-- Personal, reliable service
-- No overpromising
+- **Theme Issues:** Check [SETUP-DOCUMENTATION.md](theme/rangefit-theme/SETUP-DOCUMENTATION.md) → Issues & Solutions
+- **Deployment:** See [PUBLISH-TO-PRODUCTION.md](theme/rangefit-theme/PUBLISH-TO-PRODUCTION.md) → Troubleshooting
+- **Architecture:** Review [docs/architecture.md](docs/architecture.md)
 
 ---
 
-**Website Status:** ✅ SEO Optimized, Fully Accessible & Ready to launch
-**Accessibility Level:** WCAG 2.1 Level AA compliant (AAA for body text)
-**Documentation:** ✅ Complete and simplified
-**Next Action:** Deploy to domain and submit to search engines
+## 📈 Performance Targets
+
+| Metric | Target | Current |
+|--------|--------|---------|
+| **LCP (Largest Contentful Paint)** | <2.5s | ✅ TBD (test pre-launch) |
+| **FID (First Input Delay)** | <100ms | ✅ TBD |
+| **CLS (Cumulative Layout Shift)** | <0.1 | ✅ TBD |
+| **Mobile Page Load** | <3s | ✅ Target (NFR1) |
+| **CSS File Size** | <150KB | ✅ 96KB |
+| **JavaScript File Size** | <100KB | ✅ 17KB |
+
+**Testing Tools:**
+- Google PageSpeed Insights
+- WebPageTest
+- Chrome DevTools (Lighthouse)
+
+---
+
+## 🗺️ Roadmap
+
+### MVP (5 Weeks)
+- [x] **Week 1:** Shopify setup, theme foundation ✅ COMPLETED
+- [x] **Week 2:** Landing page sections ✅ COMPLETED
+- [ ] **Week 3:** Email automation, PDF delivery
+- [ ] **Week 4:** Subscriptions, trial flow, checkout
+- [ ] **Week 5:** Workout library, member dashboard, Discord
+
+### Post-MVP (Months 4-6)
+- [ ] AI recommendation engine (workout personalization)
+- [ ] Automated progress tracking (streaks, badges)
+- [ ] Discord bot integration (auto-roles)
+- [ ] Advanced analytics dashboard
+- [ ] Mobile app (React Native)
+
+---
+
+## 👥 Development
+
+### BMAD™ Framework
+
+This project uses the **BMAD™ (Better Management via Agent Development)** framework for AI-assisted development.
+
+**Agents:**
+- **💻 James (Dev Agent):** Code implementation, debugging, testing
+- **🏗️ Winston (Architect):** System design, technical decisions
+- **📋 PM Agent:** Story breakdown, task management
+- **🧪 QA Agent:** Quality assurance, validation
+
+**Commands:**
+```bash
+# Activate dev agent
+/BMad:agents:dev
+
+# View available commands
+*help
+
+# Implement a story
+*develop-story
+
+# Run tests
+*run-tests
+```
+
+See `.bmad-core/` for configuration.
+
+---
+
+## 📄 License
+
+**Proprietary** - RangeFit © 2025
+
+For educational purposes (IS373 - Web Systems Development)
+
+---
+
+## 🙏 Acknowledgments
+
+- **Design System:** Migrated from "Legs on the Ground v2.0" static site
+- **Base Theme:** [Shopify Skeleton Theme](https://github.com/Shopify/skeleton-theme)
+- **Fonts:** Plus Jakarta Sans, Inter (Google Fonts)
+- **Icons:** Font Awesome 6.4.0
+
+---
+
+## 📞 Contact
+
+**Developer:** Jay Singh (js426@njit.edu)
+**Course:** IS373 - Web Systems Development
+**Institution:** New Jersey Institute of Technology
+
+**Store:** [rangefit-dev.myshopify.com](https://rangefit-dev.myshopify.com)
+**Repository:** [github.com/gsinghjay/is373](https://github.com/gsinghjay/is373)
+
